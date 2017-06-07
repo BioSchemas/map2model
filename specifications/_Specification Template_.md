@@ -15,14 +15,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum nibh at lor
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
 | Property | Expected  Type | Description| CN| MG| CV|
-### Reused from Schema.org
+
+
+### New Properties
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
 | Property | Expected  Type | Description| CN| MG| CV|
-> +**Legend:**
-⋅⋅⋅_**CN:** Cardinality (one, many)_
-⋅⋅⋅_**MG:** Marginality (M: minimum; R: recommended; O: optional)_
-⋅⋅⋅_**CV**: Suggested controlled vocabularies (yes, no)_
+>**Legend:**
++ _**CN:** Cardinality (one, many)_
++ _**MG:** Marginality (M: minimum; R: recommended; O: optional)_
++ _**CV**: Suggested controlled vocabularies (yes, no)_
 
 
 [//]: # (In this secction yo put the web page links so you can reuse them.)
