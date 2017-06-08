@@ -1,5 +1,5 @@
 # **[type] specification [version]**
-##### Bioschemas specification for describing [type] in the life-science
+Bioschemas specification for describing [type] in the life-science
 ***
 ## Quick Description
 [One paragraph description.
@@ -14,13 +14,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum nibh at lor
 
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
-| Property | Expected  Type | Description| CN| MG| CV|
+| [schema.org property name] | [schema.org description] or [bioschemas clarification if needed]| [One or Many]| [M, R or O]| [Yes or No]|
 
 
 ### New Properties
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
-| Property | Expected  Type | Description| CN| MG| CV|
+| [custom name or schema.org property name if present in other type] | [schema.org property type] | [bioschemas description] | [One or Many]| [M, R or O]| [Yes or No]|
 >**Legend:**
 + _**CN:** Cardinality (one, many)_
 + _**MG:** Marginality (M: minimum; R: recommended; O: optional)_
