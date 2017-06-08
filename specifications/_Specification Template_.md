@@ -14,7 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum nibh at lor
 
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
-| [schema.org property name] | [schema.org description] or [bioschemas clarification if needed]| [One or Many]| [M, R or O]| [Yes or No]|
+| [schema.org property name] | [schema.org property type] | [schema.org description] or [bioschemas clarification if needed]| [One or Many]| [M, R or O]| [Yes or No]|
 
 
 ### New Properties
@@ -25,6 +25,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum nibh at lor
 + _**CN:** Cardinality (one, many)_
 + _**MG:** Marginality (M: minimum; R: recommended; O: optional)_
 + _**CV**: Suggested controlled vocabularies (yes, no)_
+
+## Example
+
+>Schema.org suggests implementing metadata using JSON-LD, RDFa or Microdata. JSON-LD is the recommended format by Google, but any of these formats can be used for embedding information about tools in a web page or other online resource.
+
+### Example 1 - [format: RDFa | JSON-LD | Microdata].  [Example description. Eg: Using minimum fields]
+```html
+      <div itemscope itemtype="http://schema.org/[type]">
+            <div itemprop="id">[id]</div>
+        <div itemprop="name">[name]</div>
+        <div itemprop="description">[description]</div>
+        ...
+      </div>
+```
+
+## Controlled Vocabularies
+
+>This section contains a list of fields that require a controlled vocabulary or enumeration and suggests what is acceptable for each.
+
+### [Property]
+
+[Please provide a list of suggested controlled vocabularies or a list of suggested enumerations. For controlled vocabularies include references or links to the vocabulary or branch within the vocabulary. Eg: EDAM Topic. For enumerations include values and value descriptions]
 
 
 [//]: # (In this secction yo put the web page links so you can reuse them.)
