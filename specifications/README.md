@@ -1,7 +1,7 @@
 # Specification template
 Here is the Specification Template, that should look like the page below the line.
 
-Download the [_Specification Template_.md_ file](_Specification Template_.md) and fill it **[changing the content in square brackets]**
+Download the [-Specification Template-.md file](../specifications/_Specification Template_.md) and fill it **[changing the content in square brackets]**
 
 ============================
 
