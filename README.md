@@ -1,9 +1,18 @@
-# Bioschemas Specification
-This repository will have all the standards, agreement and software development related to the Bioschemas Specification process. 
+# Bioschemas Specification Process
+This repository will help people interested to define a Bioschemas Specification,starting from the Use Case Study to the RDFa generation.
+![Bioschemas Specification Process](../master/specification%20process.jpeg)
+Here you will find all the templates and explanation to be familiar with the Specification process.
 >Please take into account that this repository is under construction, so suggestions and comments are welcome.
 
-## Goals
-1. Generate a Template that easy the mapping of Bioschemas Specification with Schema.org Types.
-2. Genarate a Template in Markdown Language that defines the Specification template for the Bioschemas Specifications.
-3. Integrate the specification in Markdown files with a copy of the Bioschemas page using Jekyll.
-4. Define the RDF Structure of each Bioschemas Specification.
+## USE CASE STUDY
+
+## MAPPING
+
+## SPECIFICATION
+
+## MARKDOWN
+
+## RDFa
+
+
+
