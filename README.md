@@ -7,10 +7,13 @@ Here you will find all the templates and documentation needed to be familiar wit
 >Please take into account that this repository is under construction, so suggestions and comments are welcome.
 
 ## USE CASE STUDY
-> Section under contruction.
+> Section under construction.
 
 ## MAPPING
-1. Item 1
+
+After Defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure.
+
+1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file 
 1. Item 2
 1. Item 3
    1. Item 3a
