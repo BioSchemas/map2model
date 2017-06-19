@@ -41,6 +41,7 @@ After Defining the properties, the Schema.org type and you will need to follow t
   1. **Cardinalitry:**	The template gives you the two possible cardinalyties in a Bioschemas Specification (ONE or Many)
   1. **Controlled Vocabulary:** A list of words separated by comas (,) precedeed by the Word "LIST - "or a list of ontologies following the syntax <Ontology_Name>:<Ontology_URL>, if you need to put more than one separate eachontology with comas (,), the ontology list should be preceeded by the word "ONTOLOGY - ".
   > "<LIST - ONE, TWO, THREE...>
+  
   > "<ONTOLOGY - ontologyname1:URL1, ontologyname2:URL2, ontologyname3:URL3...>"
 + **USE CASE**
   - **USE CASE NAME**
