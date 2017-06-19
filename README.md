@@ -1,7 +1,7 @@
 # Bioschemas Specification Process
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
 
-![Bioschemas Specification Process](../master/specification%20process.jpg)
+![Bioschemas Specification Process](../master/Specification%20Process.jpg)
 
 Here you will find all the templates and documentation needed to be familiar with the Specification Process.
 >Please take into account that this repository is under construction, so suggestions and comments are welcome.
