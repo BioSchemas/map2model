@@ -23,8 +23,8 @@ In the following README you will have the process to create:
 After Defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure.
 
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
-> Folder for Bioschemas Tool Specification
-![Bioschemas Tool Folder](../master/img/specification_folder.png)
+  > Folder for Bioschemas Tool Specification
+  ![Bioschemas Tool Folder](../master/img/specification_folder.png)
 
 2. Open the Mapping template and you will find the following structure.
 
@@ -59,27 +59,24 @@ After Defining the properties, the Schema.org type and you will need to follow t
 > Now that all the columns of the spread sheet are explained, lets follow the next step usisng the Bioschemas Tools Specification Example.
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
-> For the Tools Specificationin the Use Case Study was identified that the Schema.or Type [SoftwareApplication](http://schema.org/SoftwareApplication) is the one that fits the most with all the Use Cases.
-![Schema.org Type Definition](../master/img/schema_org_type.png)
+  > For the Tools Specificationin the Use Case Study was identified that the Schema.or Type [SoftwareApplication](http://schema.org/SoftwareApplication) is the one that fits the most with all the Use Cases.
+  ![Schema.org Type Definition](../master/img/schema_org_type.png)
 
 4. Copy the Type definition table, starting from the firts Property, don't copy the table headers.
 
-> For the SoftwareApplication example it should look like this.
-![Copy Schema.org Type Definition](../master/img/schema_org_type_copy.png)
+  > For the SoftwareApplication example it should look like this.
+  ![Copy Schema.org Type Definition](../master/img/schema_org_type_copy.png)
 
 5. Then paste into your mapping Spreadsheet starting in **A6 Cell**.
-
->  For the Tools Specification you would have something like this.
-![Pasting Schema.org Type Definition to the mapping Template](../master/img/schema_org_paste_template.png)
+  >  For the Tools Specification you would have something like this.
+  ![Pasting Schema.org Type Definition to the mapping Template](../master/img/schema_org_paste_template.png)
 
 
 6. Fill all the Use Cases for this Specification
-
->  For the Tools Specification you would have something like this. The template gives you diferent colors for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light ornge for No Match).
-![Filling the Use Cases in the Mapping Template](../master/img/fill_mapping_template_UC.png)
+  >  For the Tools Specification you would have something like this. The template gives you diferent colors for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light ornge for No Match).
+  ![Filling the Use Cases in the Mapping Template](../master/img/fill_mapping_template_UC.png)
 
 7. Fill the Bioschemas Fields
-
   + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
     1. **Property:** Name of the property from the selected schema.org type.
     1. **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
@@ -95,14 +92,14 @@ After Defining the properties, the Schema.org type and you will need to follow t
       + A list of ontologies following the syntax <Ontology_Name>:<Ontology_URL>, if you need to put more than one separate eachontology with comas (,), the ontology list should be preceeded by the word "ONTOLOGY - ".
         > "<ONTOLOGY - ontologyname1:URL1, ontologyname2:URL2, ontologyname3:URL3...>"
 
->  For the Tools Specification you would have something like this.
-![Fill the Bioschemas Fields](../master/img/bioschemas_mapping.png)
+    >  For the Tools Specification you would have something like this.
+    ![Fill the Bioschemas Fields](../master/img/bioschemas_mapping.png)
 
 8. Go to the Bioschemas fields Sheet to view the summary of your mapping
 
->  For the Tools Specification you would have something like this.
-![Mapping Summary](../master/img/mapping_summary.png)
-> If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
+  >  For the Tools Specification you would have something like this.
+  ![Mapping Summary](../master/img/mapping_summary.png)
+  > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
 
 ## SPECIFICATION
 
