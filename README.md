@@ -100,9 +100,9 @@ After Defining the properties, the Schema.org type and you will need to follow t
 
 8. Go to the Bioschemas fields Sheet to view the summary of your mapping
 
-  >  For the Tools Specification you would have something like this.
-  ![Mapping Summary](../master/img/mapping_summary.png)
-  > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
+        > For the Tools Specification you would have something like this.
+        ![Mapping Summary](../master/img/mapping_summary.png)
+        > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
 
 ## SPECIFICATION
 
