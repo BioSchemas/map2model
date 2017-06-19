@@ -38,16 +38,16 @@ After Defining the properties, the Schema.org type and you will need to follow t
   1. Minimum Fields
   1. Cardinalitry	
   1. Controlled Vocabulary
-+ <USE CASE NAME...>
-+ <USE CASE URL...>
-+ <CONTRIBUTOR1, CONTRIBUTOR2,...>
++ USE CASE NAME
++ USE CASE URL
++ CONTRIBUTOR1, CONTRIBUTOR2,...
   1. Name	
   1. Content Example
   1. UseCase
 
 >Bioschemas Tools Mapping empty file
 
-![Bioschemas Tools Mapping empty file](../master/img/mapping_empty file.png)
+![Bioschemas Tools Mapping empty file](../master/img/mapping_empty_file.png)
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
 
