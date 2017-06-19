@@ -44,11 +44,11 @@ After Defining the properties, the Schema.org type and you will need to follow t
   - **USE CASE NAME**
   - **USE CASE URL**
   - **CONTRIBUTOR1, CONTRIBUTOR2,...**: List of Contributors that worked in the description of this Use Case.
-    = Name: Name for the Use Case (This field is only needed to double check or compare the diferent names that this property has across the diffente Use Cases, and with this define the BioSchema property name).
-    = Content Example: Example of the Use Case.
-    = UseCase: Three possible options for the Specifications Mapping 
+    1. Name: Name for the Use Case (This field is only needed to double check or compare the diferent names that this property has across the diffente Use Cases, and with this define the BioSchema property name).
+    1. Content Example: Example of the Use Case.
+    1. UseCase: Three possible options for the Specifications Mapping 
         - Match: If the use case matches with a Schema.org property.
-        - 
+        - jhjgjkg
 
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
