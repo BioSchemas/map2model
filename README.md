@@ -29,6 +29,8 @@ After Defining the properties, the Schema.org type and you will need to follow t
 
 2. Open the Mapping template and you will find the following structure.
 
+![Bioschemas Tools Mapping empty file](../master/img/mapping_empty_file.png)
+
 + schema.org
   1. Property
   1. Expected Type
@@ -45,9 +47,6 @@ After Defining the properties, the Schema.org type and you will need to follow t
   1. Content Example
   1. UseCase
 
->Bioschemas Tools Mapping empty file
-
-![Bioschemas Tools Mapping empty file](../master/img/mapping_empty_file.png)
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
 
