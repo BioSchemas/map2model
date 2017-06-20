@@ -2,7 +2,7 @@
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
 
 ![Bioschemas Specification Process](../master/img/specification_process.jpg)
-> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing)and store the result in img folder wiht the name **specification_process.jpg**.
+> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder wiht the name **specification_process.jpg**.
 
 Here you will find all the templates and documentation needed to be familiar with the Specification Process.
 
