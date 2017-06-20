@@ -15,10 +15,10 @@ In the following README you will have the process to create:
 
 > These explanations will be supported by an example of the **Bioscheas Tools Specification**.
 
-## USE CASE STUDY
+## 1. USE CASE STUDY
 > Section under construction.
 
-## MAPPING
+## 2. MAPPING
 
 After Defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure.
 
@@ -103,12 +103,23 @@ After Defining the properties, the Schema.org type and you will need to follow t
       ![Mapping Summary](../master/img/mapping_summary.png)
       > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
 
-## SPECIFICATION
+## 3. SPECIFICATION
 
-### G-DOCS SPECIFICATION
-Now that we have done the Specification Mapping there ar
+Now that we have done the **Specification Mapping** there are two ways for documenting the SPecification:
 
-### MARKDOWN SPECIFICATION
+      1. G-DOCS SPECIFICATION
+      1. MARKDOWN SPECIFICATION
+      
+The **G-DOCS Specification** is thought to be a way for having a realtime feedback from the **collaborators**, but you can just jump to do the **MarkDown Specification** to be published in the Bioschemas page.
+
+### 3.1. G-DOCS SPECIFICATION
+      
+      1. Make a copy of the [specification template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> specification** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
+            > Folder for Bioschemas Tool Specification
+            ![Bioschemas Tool Folder](../master/img/specification_folder.png)
+      1. First Copy the 
+
+### 3.2. MARKDOWN SPECIFICATION
 
 > Section under construction.
 
