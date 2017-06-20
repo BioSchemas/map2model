@@ -13,8 +13,6 @@ In the following README you will have the process to create:
 1. Markdown
 1. RDFa
 
-> Please take into account that this repository is under construction, so suggestions and comments are welcome.
-
 > These explanations will be supported by an example of the **Bioscheas Tools Specification**.
 
 ## USE CASE STUDY
@@ -107,9 +105,10 @@ After Defining the properties, the Schema.org type and you will need to follow t
 
 ## SPECIFICATION
 
-> Section under construction.
+### G-DOCS SPECIFICATION
+Now that we have done the Specification Mapping there ar
 
-## MARKDOWN
+### MARKDOWN SPECIFICATION
 
 > Section under construction.
 
@@ -117,5 +116,5 @@ After Defining the properties, the Schema.org type and you will need to follow t
 
 > Section under construction.
 
-
+> **Please take into account that this repository is under construction, so suggestions and comments are welcome.**
 
