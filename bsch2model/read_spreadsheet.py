@@ -1,5 +1,6 @@
 import gspread
 import csv
+import json
 from oauth2client.service_account import ServiceAccountCredentials
 
 
@@ -9,8 +10,7 @@ client = gspread.authorize(creds)
 
 sheet = client.open("BiologicalEntity mapping").get_worksheet(0)
 
-list_of_hashes = sheet.get_all_records()
+list_of_hashes = sheet.get_all_records(head=4)
 
-with open("full_specification_output.csv", "wb") as f_out:
-    writer = csv.writer(f_out)
-    writer.writerows(list_of_hashes)
+with open('mapping_convertion.json','w') as fp:
+    json.dump(list_of_hashes, fp)
