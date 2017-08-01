@@ -10,14 +10,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum nibh at lor
 ## Properties
 > Based on schema.org [[Schema dot org Type]][sch_type]
 
-### Reused from Schema.org
+### Reused from schema.org [Type]
 
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
 | [schema.org property name] | [schema.org property type] | [schema.org description] or [bioschemas clarification if needed]| [One or Many]| [M, R or O]| [Yes or No]|
 
 
-### New Properties
+### New Properties 
 | Property | Expected  Type    | Description                      | CN | MG | CV|
 |---------|:------------------:|----------------------------------|:--:|:--:|:--:|
 | [custom name or schema.org property name if present in other type] | [schema.org property type] | [bioschemas description] | [One or Many]| [M, R or O]| [Yes or No]|
