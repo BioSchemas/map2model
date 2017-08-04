@@ -1,0 +1,127 @@
+{
+   "name": "Tool",
+   "version": "0.0.1",
+   "description": "Some description.",
+   "properties": [
+      {
+         "name": "featureList",
+         "expected_type": [
+            "Text",
+            "URL"
+         ],
+         "sdo_desc": "Features or modules provided by this application (and possibly required by other applications).",
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "softwareHelp",
+         "expected_type": [
+            "CreativeWork"
+         ],
+         "sdo_desc": "Software application help.",
+         "bsc_dec": "softwareHelp:url, softwareHelp:genre, softwareHelp:description/review",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "softwareRequirements",
+         "expected_type": [
+            "Text",
+            "URL"
+         ],
+         "sdo_desc": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements.",
+         "bsc_dec": "contact/email, contact/url, contact/name, contact/tel, contact/type",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "supportingData",
+         "expected_type": [
+            "DataFeed"
+         ],
+         "sdo_desc": "Supporting data for a SoftwareApplication.",
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "ONE",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "accountablePerson",
+         "expected_type": [
+            "Person"
+         ],
+         "sdo_desc": "Specifies the Person that is legally accountable for the CreativeWork.",
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "ONE",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "citation",
+         "expected_type": [
+            "CreativeWork",
+            "Text"
+         ],
+         "sdo_desc": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "description",
+         "expected_type": [
+            "Text"
+         ],
+         "sdo_desc": "A description of the item.",
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "name",
+         "expected_type": [
+            "Text"
+         ],
+         "sdo_desc": "The name of the item.",
+         "bsc_dec": "",
+         "marginality": "Optional",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      },
+      {
+         "name": "",
+         "expected_type": [
+            ""
+         ],
+         "sdo_desc": "",
+         "bsc_dec": "publication, publication/doi",
+         "marginality": "Recommended",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
+      }
+   ]
+}
