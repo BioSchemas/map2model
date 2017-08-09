@@ -10,8 +10,3 @@ for bsc_spec in bsc_spec_list:
     mapping_file_id=bsc_spec_list[bsc_spec]['mapping_id']
     bsc_parser.set_gsheet_id(mapping_file_id)
     bsc_parser.get_Mapping_JSON()
-
-
-
-
-
