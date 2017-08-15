@@ -1,5 +1,11 @@
 ---
-description: Some description.
+description: "This protein structure specification presents the usage of the generic\
+  \ type BiologicalEntity for the biological type \u201Cprotein structure\u201D. The\
+  \ biological type makes use of additionalProperty so please read carefully the extra\
+  \ documentation provided here for the correct and expected usage of that property.\
+  \ Please be aware that \u201Cprotein structure\u201D is NOT a schema.org type but\
+  \ a BiologicalEntity profile."
+layout: new_spec_detail
 name: ProteinStructure
 new_bsc:
 - bsc_dec: ''
@@ -23,12 +29,9 @@ new_bsc:
   marginality: Optional
   name: biocoordinates
   sdo_desc: 'Coordinates in a 1 or 2D space, for instance length/coordinates in a
-    sequence.
-
-
-    Usage (example): Use a QuantitativeValue with properties minValue and maxValue
-    for a region or value for a site in a Protein. Use it only with value for a protein
-    length.'
+    sequence.  Usage (example): Use a QuantitativeValue with properties minValue and
+    maxValue for a region or value for a site in a Protein. Use it only with value
+    for a protein length.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -38,12 +41,11 @@ new_bsc:
   - Text
   marginality: Minimum
   name: biologicalType
-  sdo_desc: 'List with types preferably supported by BioSchemas-> enumeration list
+  sdo_desc: List with types preferably supported by BioSchemas-> enumeration list
     of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation).
     If the value is not on the list then the data will still be parsed but only generic
-    properties will be validated.
-
-    {population,individual,tissue,cell,molecule,protein,nucleic acid}'
+    properties will be validated. {population,individual,tissue,cell,molecule,protein,nucleic
+    acid}
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -53,10 +55,8 @@ new_bsc:
   - Thing
   marginality: Optional
   name: crossReference
-  sdo_desc: 'A pointer to another, somehow related entity.
-
-    Usage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other
-    more specific does not work.'
+  sdo_desc: 'A pointer to another, somehow related entity. Usage: Whenever isBasedOn/isBasisFor,
+    isPartOf/hasPart, citation or any other more specific does not work.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -69,10 +69,7 @@ new_bsc:
   marginality: Optional
   name: isBasisFor
   sdo_desc: 'A resource for which this resource has been used for the creation of
-    the former.
-
-
-    Inverse property: isBasedOn'
+    the former.  Inverse property: isBasedOn'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -126,10 +123,7 @@ new_bsc:
   - Thing
   marginality: Recommended
   name: isMentionedIn
-  sdo_desc: 'CretiveWork, Dataset, collection mentioning this entity
-
-
-    Inverse of:mentions'
+  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -289,7 +283,6 @@ reu_bsc:
   marginality: Optional
   name: hasPart
   sdo_desc: 'Indicates a BiologicalEntity that is (in some sense) a part of this BiologicalEntity.
-
     Inverse property: isPartOf.'
 - bsc_dec: ''
   cardinality: MANY
@@ -314,8 +307,8 @@ reu_bsc:
   - BiologicalEntity
   marginality: Optional
   name: isPartOf
-  sdo_desc: "Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)\
-    \ part of.\n Inverse property: hasPart."
+  sdo_desc: 'Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)
+    part of.  Inverse property: hasPart.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''

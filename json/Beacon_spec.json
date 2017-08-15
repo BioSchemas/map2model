@@ -1,14 +1,12 @@
 {
    "name": "Beacon",
-   "version": "0.0.1",
-   "description": "Some description.",
    "properties": [
       {
          "name": "dataset",
          "expected_type": [
             "Dataset"
          ],
-         "sdo_desc": "A dataset contained in this catalog.\nInverse property: includedInDataCatalog.",
+         "sdo_desc": "A dataset contained in this catalog. Inverse property: includedInDataCatalog.",
          "bsc_dec": "dataset",
          "marginality": "Minimum",
          "cardinality": "MANY",
@@ -111,5 +109,8 @@
          "domain": "Beacon",
          "domain_case": "new_bsc"
       }
-   ]
+   ],
+   "subtitle": "A convention for beacon to self-describe. ",
+   "description": "In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.",
+   "version": "0.0.1"
 }

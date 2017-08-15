@@ -1,7 +1,5 @@
 {
    "name": "Tool",
-   "version": "0.0.1",
-   "description": "Some description.",
    "properties": [
       {
          "name": "featureList",
@@ -123,5 +121,8 @@
          "domain": "invalid domain type",
          "domain_case": "new_bsc"
       }
-   ]
+   ],
+   "subtitle": "Bioschemas specification for describing SoftwareApplication in the life-science.",
+   "description": "[One paragraph description]\n[References to supporting information like \u201cuse cases\u201d, \u201cbioschemas mapping\u201d and \u201cschema.org posted issues\u201d]\n",
+   "version": "0.0.1"
 }

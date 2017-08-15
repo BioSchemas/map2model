@@ -1,5 +1,12 @@
 ---
-description: Some description.
+description: "This document covers the schema.org and bioschemas.org properties necessary\
+  \ to describe data repositories, catalogues and databases in the life sciences,\
+  \ organised by their requirement level (M for mandatory, R for recommended and O\
+  \ for optional) and driven by a set of use cases. A simple example in JSON-LD is\
+  \ also provided. The majority of these fields already exist in schema.org, others\
+  \ are pending. \nNote that this draft will be improved progressively through the\
+  \ bioschemas process.\n"
+layout: new_spec_detail
 name: DataRepository
 new_bsc:
 - bsc_dec: ''
@@ -24,9 +31,7 @@ reu_sdo:
   - Dataset
   marginality: Minimum
   name: dataset
-  sdo_desc: 'A dataset contained in this catalog.
-
-    Inverse property: includedInDataCatalog.'
+  sdo_desc: 'A dataset contained in this catalog. Inverse property: includedInDataCatalog.'
 - bsc_dec: CreativeWork:Name,URL
   cardinality: MANY
   controlled_vocab: ''

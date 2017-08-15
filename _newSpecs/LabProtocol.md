@@ -1,5 +1,18 @@
 ---
-description: Some description.
+description: 'An experimental protocol is a sequence of tasks and operations executed
+  to perform experimental research in biological and biomedical areas.
+
+  Experimental protocols are fundamental information structures that support the description
+  of the processes by means of which results are generated in experimental research
+  [1]. Experimental protocols describe how the data were produced, the steps undertaken
+  and conditions under which these steps were carried out.
+
+  [1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation
+  for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop
+  on Linked Science 2014- Making Sense Out of Data (LISC2014)
+
+  '
+layout: new_spec_detail
 name: LabProtocol
 new_bsc:
 - bsc_dec: ''
@@ -57,10 +70,7 @@ new_bsc:
   - Thing
   marginality: Recommended
   name: isMentionedIn
-  sdo_desc: 'CretiveWork, Dataset, collection mentioning this entity
-
-
-    Inverse of:mentions'
+  sdo_desc: CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions
 new_sdo: []
 reu_bsc:
 - bsc_dec: ''
@@ -166,11 +176,9 @@ reu_sdo:
   - URL
   marginality: Minimum
   name: device
-  sdo_desc: 'Device required to run the application. Used in cases where a specific
-    make/model is required to run the application.
-
-
-    For LabProtocols it would be a laboratory equipment.'
+  sdo_desc: Device required to run the application. Used in cases where a specific
+    make/model is required to run the application.  For LabProtocols it would be a
+    laboratory equipment.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''

@@ -54,18 +54,12 @@ class FrontMatterParser:
 
         for json_spec in self.json_specs:
             temp_spec_post=get_specification_post(self.path_to_json, json_spec,self.use_cases)
+            temp_spec_post.metadata['layout']= 'new_spec_detail'
             md_fm_bytes = BytesIO()
             frontmatter.dump(temp_spec_post, md_fm_bytes)
             with open(self.md_files_path+temp_spec_post.metadata['name']+'.md', 'w') as outfile:
                 temp_str=str(md_fm_bytes.getvalue(),'utf-8')
                 outfile.write(temp_str)
+                outfile.close()
 
         print ('completed')
-
-
-
-
-
-
-
-

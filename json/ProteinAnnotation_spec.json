@@ -1,14 +1,12 @@
 {
    "name": "ProteinAnnotation",
-   "version": "0.0.1",
-   "description": "Some description.",
    "properties": [
       {
          "name": "biocoordinates",
          "expected_type": [
             "QuantitativeValue"
          ],
-         "sdo_desc": "Coordinates in a 1 or 2D space, for instance length/coordinates in a sequence.\n\nUsage (example): Use a QuantitativeValue with properties minValue and maxValue for a region or value for a site in a Protein. Use it only with value for a protein length.",
+         "sdo_desc": "Coordinates in a 1 or 2D space, for instance length/coordinates in a sequence.  Usage (example): Use a QuantitativeValue with properties minValue and maxValue for a region or value for a site in a Protein. Use it only with value for a protein length.",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
@@ -21,7 +19,7 @@
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "List with types preferably supported by BioSchemas-> enumeration list of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation). If the value is not on the list then the data will still be parsed but only generic properties will be validated.\n{population,individual,tissue,cell,molecule,protein,nucleic acid}",
+         "sdo_desc": "List with types preferably supported by BioSchemas-> enumeration list of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation). If the value is not on the list then the data will still be parsed but only generic properties will be validated. {population,individual,tissue,cell,molecule,protein,nucleic acid}",
          "bsc_dec": "",
          "marginality": "Minimum",
          "cardinality": "MANY",
@@ -34,7 +32,7 @@
          "expected_type": [
             "Thing"
          ],
-         "sdo_desc": "A pointer to another, somehow related entity.\nUsage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other more specific does not work.",
+         "sdo_desc": "A pointer to another, somehow related entity. Usage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other more specific does not work.",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
@@ -49,7 +47,7 @@
             "URL",
             "BiologicalEntity"
          ],
-         "sdo_desc": "A resource for which this resource has been used for the creation of the former.\n\nInverse property: isBasedOn",
+         "sdo_desc": "A resource for which this resource has been used for the creation of the former.  Inverse property: isBasedOn",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
@@ -173,7 +171,7 @@
          "expected_type": [
             "BiologicalEntity"
          ],
-         "sdo_desc": "Indicates a BiologicalEntity that this BiologicalEntity is (in some sense) part of.\n Inverse property: hasPart.",
+         "sdo_desc": "Indicates a BiologicalEntity that this BiologicalEntity is (in some sense) part of.  Inverse property: hasPart.",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
@@ -199,7 +197,7 @@
          "expected_type": [
             "Thing"
          ],
-         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity\n\nInverse of:mentions",
+         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions",
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "ONE",
@@ -287,5 +285,8 @@
          "domain": "Thing",
          "domain_case": "reu_sdo"
       }
-   ]
+   ],
+   "subtitle": "A convention for beacon to self-describe. ",
+   "description": "In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.",
+   "version": "0.0.1"
 }

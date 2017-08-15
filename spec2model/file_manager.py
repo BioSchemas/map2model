@@ -11,7 +11,7 @@ class FolderDigger:
     def __init__(self):
         self.gauth = GoogleAuth()
         # Try to load saved client credentials
-        self.gauth.LoadCredentialsFile("spec2model/mycreds.txt")
+        self.gauth.LoadCredentialsFile("../spec2model/mycreds.txt")
         if self.gauth.credentials is None:
             # Authenticate if they're not there
             self.gauth.LocalWebserverAuth()
@@ -22,7 +22,7 @@ class FolderDigger:
             # Initialize the saved creds
             self.gauth.Authorize()
             # Save the current credentials to a file
-            self.gauth.SaveCredentialsFile("spec2model/mycreds.txt")
+            self.gauth.SaveCredentialsFile("../spec2model/mycreds.txt")
 
         self.drive = GoogleDrive(self.gauth)
         #This is the id of the folder Specification

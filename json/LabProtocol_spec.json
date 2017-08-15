@@ -1,7 +1,5 @@
 {
    "name": "LabProtocol",
-   "version": "0.0.1",
-   "description": "Some description.",
    "properties": [
       {
          "name": "advantage",
@@ -155,7 +153,7 @@
          "expected_type": [
             "Thing"
          ],
-         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity\n\nInverse of:mentions",
+         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions",
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
@@ -169,7 +167,7 @@
             "Text",
             "URL"
          ],
-         "sdo_desc": "Device required to run the application. Used in cases where a specific make/model is required to run the application.\n\nFor LabProtocols it would be a laboratory equipment.",
+         "sdo_desc": "Device required to run the application. Used in cases where a specific make/model is required to run the application.  For LabProtocols it would be a laboratory equipment.",
          "bsc_dec": "",
          "marginality": "Minimum",
          "cardinality": "MANY",
@@ -217,5 +215,8 @@
          "domain": "Event",
          "domain_case": "reu_sdo"
       }
-   ]
+   ],
+   "subtitle": "Bioschemas specification describing LabProtocol in the life-science.",
+   "description": "An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.\nExperimental protocols are fundamental information structures that support the description of the processes by means of which results are generated in experimental research [1]. Experimental protocols describe how the data were produced, the steps undertaken and conditions under which these steps were carried out.\n[1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop on Linked Science 2014- Making Sense Out of Data (LISC2014)\n",
+   "version": "0.0.1"
 }

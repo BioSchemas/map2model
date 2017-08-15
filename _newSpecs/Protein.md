@@ -1,5 +1,8 @@
 ---
-description: Some description.
+description: "This protein specification presents the usage of the generic type BiologicalEntity\
+  \ by the biological type \u201Cprotein\u201D. Please be aware \u201Cprotein\u201D\
+  \ is NOT a schema.org type but a BiologicalEntity profile."
+layout: new_spec_detail
 name: Protein
 new_bsc:
 - bsc_dec: ''
@@ -23,12 +26,9 @@ new_bsc:
   marginality: Recommended
   name: biocoordinates
   sdo_desc: 'Coordinates in a 1 or 2D space, for instance length/coordinates in a
-    sequence.
-
-
-    Usage (example): Use a QuantitativeValue with properties minValue and maxValue
-    for a region or value for a site in a Protein. Use it only with value for a protein
-    length.'
+    sequence.  Usage (example): Use a QuantitativeValue with properties minValue and
+    maxValue for a region or value for a site in a Protein. Use it only with value
+    for a protein length.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -38,12 +38,11 @@ new_bsc:
   - Text
   marginality: Minimum
   name: biologicalType
-  sdo_desc: 'List with types preferably supported by BioSchemas-> enumeration list
+  sdo_desc: List with types preferably supported by BioSchemas-> enumeration list
     of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation).
     If the value is not on the list then the data will still be parsed but only generic
-    properties will be validated.
-
-    {population,individual,tissue,cell,molecule,protein,nucleic acid}'
+    properties will be validated. {population,individual,tissue,cell,molecule,protein,nucleic
+    acid}
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -53,10 +52,8 @@ new_bsc:
   - Thing
   marginality: Optional
   name: crossReference
-  sdo_desc: 'A pointer to another, somehow related entity.
-
-    Usage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other
-    more specific does not work.'
+  sdo_desc: 'A pointer to another, somehow related entity. Usage: Whenever isBasedOn/isBasisFor,
+    isPartOf/hasPart, citation or any other more specific does not work.'
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
@@ -89,10 +86,7 @@ new_sdo:
   - Thing
   marginality: Recommended
   name: isMentionedIn
-  sdo_desc: 'CreativeWork, Dataset, collection mentioning this entity
-
-
-    Inverse of:mentions'
+  sdo_desc: CreativeWork, Dataset, collection mentioning this entity  Inverse of:mentions
 reu_bsc:
 - bsc_dec: ''
   cardinality: MANY
@@ -151,7 +145,6 @@ reu_bsc:
   marginality: Optional
   name: hasPart
   sdo_desc: 'Indicates a BiologicalEntity that is (in some sense) a part of this BiologicalEntity.
-
     Inverse property: isPartOf.'
 - bsc_dec: ''
   cardinality: MANY
@@ -162,8 +155,8 @@ reu_bsc:
   - BiologicalEntity
   marginality: Optional
   name: isPartOf
-  sdo_desc: "Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)\
-    \ part of.\n Inverse property: hasPart."
+  sdo_desc: 'Indicates a BiologicalEntity that this BiologicalEntity is (in some sense)
+    part of.  Inverse property: hasPart.'
 reu_sdo:
 - bsc_dec: ''
   cardinality: MANY
@@ -174,14 +167,11 @@ reu_sdo:
   - PropertyValue
   marginality: Optional
   name: additionalProperty
-  sdo_desc: 'A property-value pair representing an additional characteristics of the
+  sdo_desc: A property-value pair representing an additional characteristics of the
     entitity, e.g. a product feature or another characteristic for which there is
-    no matching property in schema.org.
-
-
-    Avoid it if possible, otherwise use it carefully. Please keep in mind that Bioschemas
-    does not pretend to model every single possible field but mainly those useful
-    for discoverability, summarization and accessibility.'
+    no matching property in schema.org.  Avoid it if possible, otherwise use it carefully.
+    Please keep in mind that Bioschemas does not pretend to model every single possible
+    field but mainly those useful for discoverability, summarization and accessibility.
 - bsc_dec: ''
   cardinality: MANY
   controlled_vocab: ''
