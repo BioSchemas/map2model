@@ -1,7 +1,5 @@
 from ruamel.yaml import YAML
 
-
-
 class YamlIO:
     yml_path=''
     yaml= ''
@@ -13,20 +11,10 @@ class YamlIO:
     def set_yml_path(self, file_path):
         self.yml_path = file_path
 
-    def read_yml_config(self):
+    def get_spec_yml_config(self):
         self.yaml.allow_duplicate_keys = True
         with open(self.yml_path) as f:
             stream = f.read()
         config_yml=self.yaml.load(stream)
 
-
-
-
-all_specs_yml=config_yml['specifications']
-
-for spec_yml in all_specs_yml:
-    print(spec_yml['g_folder'])
-    temp = spec_yml['name']
-
-
-print(temp)
+        return config_yml['specifications']
