@@ -1,30 +1,30 @@
 specifications:
   - name : Tool
     g_folder: Tool
-    g_mapping_file: Tool mapping
+    g_mapping_file: Tool Mapping
     status: revision
-    stereotype: none
-    github_url:
+    stereotype: None
+    github_url: None
     version: 0.0.1
   - name : Beacon
     g_folder: Beacon
     g_mapping_file: Beacon Mapping
     status: revision
-    stereotype: none
-    github_url:
+    stereotype: None
+    github_url: None
     version: 0.0.1
   - name : BiologicalEntity
     g_folder: BiologicalEntity
     g_mapping_file: BiologicalEntity Mapping
     status: revision
-    stereotype: none
+    stereotype: None
     github_url: https://github.com/BioSchemas/BiologicalEntity
     version: 0.0.1
   - name : LaboratoryProtocol
     g_folder: LabProtocol
     g_mapping_file: LabProtocol Mapping
     status: revision
-    stereotype: none
+    stereotype: None
     github_url: https://github.com/BioSchemas/LaboratoryProtocol
     version: 0.0.1
   - name : Protein
@@ -47,4 +47,11 @@ specifications:
     status: revision
     stereotype: BiologicalEntity
     github_url: https://github.com/BioSchemas/Proteins
+    version: 0.0.1
+  - name : DataRepository
+    g_folder: DataRepository
+    g_mapping_file: DataRepository Mapping
+    status: revision
+    stereotype: None
+    github_url: https://github.com/BioSchemas/DataRepositories
     version: 0.0.1

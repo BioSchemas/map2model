@@ -1,5 +1,4 @@
 {
-   "name": "Beacon",
    "properties": [
       {
          "name": "dataset",
@@ -25,7 +24,7 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "NO",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -39,7 +38,7 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "NO",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -106,11 +105,17 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "YES",
-         "domain": "Beacon",
+         "domain": "invalid domain type",
          "domain_case": "new_bsc"
       }
    ],
+   "name": "Beacon",
+   "g_mapping_file": "Beacon Mapping",
+   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1WVVQ9UzEWz7hxreJwqf5SIyYO6YalZuASRX9njv7hYE/edit?usp=drivesdk",
+   "status": "revision",
+   "stereotype": "None",
+   "github_url": "None",
+   "version": "0.0.1",
    "subtitle": "A convention for beacon to self-describe. ",
-   "description": "In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.",
-   "version": "0.0.1"
+   "description": "In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties."
 }

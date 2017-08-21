@@ -1,5 +1,4 @@
 {
-   "name": "DataRepository",
    "properties": [
       {
          "name": "dataset",
@@ -25,7 +24,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -39,7 +38,7 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -52,7 +51,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -66,7 +65,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -79,7 +78,7 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -93,7 +92,7 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -107,7 +106,7 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -120,7 +119,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -133,7 +132,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "domain": "DataCatalog",
          "domain_case": "reu_sdo"
       },
       {
@@ -146,8 +145,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "Thing",
-         "domain_case": "reu_sdo"
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
       },
       {
          "name": "description",
@@ -159,8 +158,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "Thing",
-         "domain_case": "reu_sdo"
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
       },
       {
          "name": "identifier",
@@ -174,8 +173,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "Thing",
-         "domain_case": "reu_sdo"
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
       },
       {
          "name": "name",
@@ -187,8 +186,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "Thing",
-         "domain_case": "reu_sdo"
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
       },
       {
          "name": "url",
@@ -200,8 +199,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "Thing",
-         "domain_case": "reu_sdo"
+         "domain": "invalid domain type",
+         "domain_case": "new_bsc"
       },
       {
          "name": "metrics",
@@ -213,11 +212,17 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "DataRepository",
+         "domain": "invalid domain type",
          "domain_case": "new_bsc"
       }
    ],
+   "name": "DataRepository",
+   "g_mapping_file": "DataRepository Mapping",
+   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1H12h5VpVNJFzNs2RQJWjXkauCEn3qEsVFzKRoiHHffY/edit?usp=drivesdk",
+   "status": "revision",
+   "stereotype": "None",
+   "github_url": "https://github.com/BioSchemas/DataRepositories",
+   "version": "0.0.1",
    "subtitle": "Bioschemas specification for describing data repositories and data catalogues in the life-sciences.",
-   "description": "This document covers the schema.org and bioschemas.org properties necessary to describe data repositories, catalogues and databases in the life sciences, organised by their requirement level (M for mandatory, R for recommended and O for optional) and driven by a set of use cases. A simple example in JSON-LD is also provided. The majority of these fields already exist in schema.org, others are pending. \nNote that this draft will be improved progressively through the bioschemas process.\n",
-   "version": "0.0.1"
+   "description": "This document covers the schema.org and bioschemas.org properties necessary to describe data repositories, catalogues and databases in the life sciences, organised by their requirement level (M for mandatory, R for recommended and O for optional) and driven by a set of use cases. A simple example in JSON-LD is also provided. The majority of these fields already exist in schema.org, others are pending. \nNote that this draft will be improved progressively through the bioschemas process.\n"
 }

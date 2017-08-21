@@ -51,14 +51,6 @@ def get_expected_type(expected_types):
     return list_of_types
 
 
-def get_mapping_description(mapping_sheet):
-    mapping_description = {}
-    mapping_description['subtitle'] = mapping_sheet.acell('B1').value
-    mapping_description['description'] = mapping_sheet.acell('B2').value
-    mapping_description['version']='0.0.1'
-    return mapping_description
-
-
 def get_mapping_properties(mapping_sheet):
     list_of_hashes = mapping_sheet.get_all_records(head=5)
 
@@ -81,7 +73,7 @@ def get_mapping_properties(mapping_sheet):
             property_as_dic['name'] = c_property['Property'].strip().strip('\n')
             property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
             property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
-            property_as_dic['bsc_dec'] = c_property['SubProperties'].strip().replace('\n', ' ')
+            property_as_dic['bsc_dec'] = c_property['BSC Description'].strip().replace('\n', ' ')
             property_as_dic['marginality'] = c_property['Minimum Fields'].replace('\n', ' ')
             property_as_dic['cardinality'] = c_property['Cardinality'].strip().strip('\n').replace('\n', ' ')
             property_as_dic['controlled_vocab'] = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
@@ -93,36 +85,49 @@ def get_mapping_properties(mapping_sheet):
 
 
 class JSONParser:
-    gsheet_id = '1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc'
-    cred_file = 'sdo-bioschemas-client.json'
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+    gsheet_id = ''
+    cred_file = ''
+    scope = []
+    spec_metadata={}
     bsc_specification = {}
 
     def __init__(self):
         self.gsheet_id = '1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc'
-        self.cred_file = 'sdo-bioschemas-client.json'
+        self.cred_file = '../spec2model/sdo-bioschemas-client.json'
         self.scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+        self.spec_metadata={}
         self.bsc_specification = {}
 
     def set_gsheet_id(self, gsheet_id):
         self.gsheet_id = gsheet_id
 
+    def set_spec_metadata(self, spec_metadata):
+        self.spec_metadata=spec_metadata
+
+    def __get_mapping_description(self, mapping_sheet):
+        mapping_description = {}
+        mapping_description['name']=self.spec_metadata['name']
+        mapping_description['g_mapping_file']=self.spec_metadata['g_mapping_file']
+        mapping_description['spec_mapping_url']=self.spec_metadata['spec_mapping_url']
+        mapping_description['status']=self.spec_metadata['status']
+        mapping_description['stereotype']=self.spec_metadata['stereotype']
+        mapping_description['github_url']=self.spec_metadata['github_url']
+        mapping_description['version']=self.spec_metadata['version']
+        mapping_description['subtitle'] = mapping_sheet.acell('B1').value
+        mapping_description['description'] = mapping_sheet.acell('B2').value
+        return mapping_description
+
     def get_mapping_json(self):
 
         creds = ServiceAccountCredentials.from_json_keyfile_name(self.cred_file, self.scope)
         client = gspread.authorize(creds)
-        spread_sheet_name = client.open_by_key(self.gsheet_id).title
-        spec_name = spread_sheet_name
-        spec_name = spec_name.replace(' mapping', '')
-        spec_name = spec_name.replace(' Mapping', '')
         mapping_sheet = client.open_by_key(self.gsheet_id).get_worksheet(0)
 
-        self.bsc_specification['name']=spec_name
-        spec_description = get_mapping_description(mapping_sheet)
+        spec_description = self.__get_mapping_description(mapping_sheet)
         self.bsc_specification['properties'] = get_mapping_properties(mapping_sheet)
         self.bsc_specification.update(spec_description)
 
-        with open('../json/' + spec_name + '_spec.json', 'w') as outfile:
+        with open('../json/' + spec_description['name'] + '_spec.json', 'w') as outfile:
             json.dump(self.bsc_specification, outfile, indent=3)
             outfile.close()
         return self.bsc_specification

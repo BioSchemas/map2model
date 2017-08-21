@@ -23,6 +23,12 @@ def get_specification_post(path_to_json,spec_file, use_cases):
     spec_metadata['name']=spec_data['name']
     spec_metadata['version']=spec_data['version']
     spec_metadata['description']=spec_data['description']
+    spec_metadata['g_mapping_file']=spec_data['g_mapping_file']
+    spec_metadata['status']=spec_data['status']
+    spec_metadata['stereotype']=spec_data['stereotype']
+    spec_metadata['github_url']=spec_data['github_url']
+    spec_metadata['subtitle']=spec_data['subtitle']
+    spec_metadata['spec_mapping_url']=spec_data['spec_mapping_url']
     spec_post=frontmatter.Post('')
 
     for use_case in use_cases:

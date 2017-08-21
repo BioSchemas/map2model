@@ -7,6 +7,7 @@ bsc_spec_list = bsc_file_manager.get_specification_list()
 bsc_parser = mapper.JSONParser()
 
 for bsc_spec in bsc_spec_list:
-    mapping_file_id = bsc_spec_list[bsc_spec]['mapping_id']
-    bsc_parser.set_gsheet_id(mapping_file_id)
+    mapping_file_id = bsc_spec
+    bsc_parser.set_gsheet_id(bsc_spec)
+    bsc_parser.set_spec_metadata(bsc_spec_list[bsc_spec])
     bsc_parser.get_mapping_json()
