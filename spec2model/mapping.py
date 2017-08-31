@@ -11,31 +11,6 @@ def isSchemaorgType(current_url):
         return False
     return True
 
-
-# Function sets property domain and property domain case based on the name of the Property field title
-# returns an array with the propperty domain and the property type
-def get_domain_and_case(property_field):
-    prop_case = 'new_bsc'
-    prop_domain = ''
-
-    if (property_field.find('New properties for') == 0):
-        prop_domain = property_field[19:]
-        if (isSchemaorgType('http://schema.org/' + prop_domain)):
-            prop_case = 'new_sdo'
-        else:
-            prop_case = 'new_bsc'
-    elif (property_field.find('Reused properties from') == 0):
-        prop_domain = property_field[23:]
-        if (isSchemaorgType('http://schema.org/' + prop_domain)):
-            prop_case = 'reu_sdo'
-        else:
-            prop_case = 'reu_bsc'
-    else:
-        prop_domain = 'invalid domain type'
-
-    return [prop_domain, prop_case]
-
-
 # Function that receives an string with expected types and generates an array with each expected pype
 def get_expected_type(expected_types):
     expected_types = expected_types.strip()
@@ -53,34 +28,34 @@ def get_expected_type(expected_types):
 
 def get_mapping_properties(mapping_sheet):
     list_of_hashes = mapping_sheet.get_all_records(head=5)
-
     type_properties = []
-
-    prop_domain = ''
-    domain_case = ''
+    reused_from = 'Thing'
+    domain_case = 'new_sdo'
     for c_property in list_of_hashes:
         property_as_dic = {}
+        property_value = c_property['Property']
         marg_value = c_property['Minimum Fields']
         # domain_case can have new_bsc (new property for Bioschema Type), new_sdo (New Property for Schema.org Type),
         # reu_bsc (reuse a property from Bioschema Type), reu_sdo (Reuse Schema.org Type)
-        if (c_property['Expected Type'] == '' and c_property['Description'] == '' and c_property[
-            'Minimum Fields'] == ''):
-            property_string = c_property['Property']
-            domain_info = get_domain_and_case(property_string)
-            prop_domain = domain_info[0]
-            domain_case = domain_info[1]
+        if (property_value.find('Reused properties from') == 0 and c_property['Description'] == '' and marg_value == ''):
+            reused_from = property_value[23:].strip()
+            domain_case = 'reu_sdo'
+        elif(property_value.find('New properties') == 0 and c_property['Description'] == '' and marg_value == ''):
+            reused_from = 'Thing'
+            domain_case = 'new_sdo'
         elif (marg_value == "Minimum" or marg_value == "Recommended" or marg_value == "Optional"):
             property_as_dic['name'] = c_property['Property'].strip().strip('\n')
+            if isSchemaorgType('http://schema.org/' + property_as_dic['name']):
+                domain_case='reu_sdo'
             property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
             property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
             property_as_dic['bsc_dec'] = c_property['BSC Description'].strip().replace('\n', ' ')
             property_as_dic['marginality'] = c_property['Minimum Fields'].replace('\n', ' ')
             property_as_dic['cardinality'] = c_property['Cardinality'].strip().strip('\n').replace('\n', ' ')
             property_as_dic['controlled_vocab'] = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
-            property_as_dic['domain'] = prop_domain.strip().replace('\n', ' ')
+            property_as_dic['reused_from'] = reused_from.strip().replace('\n', ' ')
             property_as_dic['domain_case'] = domain_case.strip().replace('\n', ' ')
             type_properties.append(property_as_dic)
-
     return type_properties
 
 

@@ -1,12 +1,7 @@
 import os, json, frontmatter
 from io import BytesIO
 
-def get_domain_case(spec_data, domain_case):
-    use_case_props=[]
-    for property in spec_data['properties']:
-        if property['domain_case']==domain_case:
-            use_case_props+=[property]
-    return use_case_props
+
 
 def get_json_dict(json_path):
     with open(json_path) as data_file:
@@ -31,8 +26,13 @@ def get_specification_post(path_to_json,spec_file, use_cases):
     spec_metadata['spec_mapping_url']=spec_data['spec_mapping_url']
     spec_post=frontmatter.Post('')
 
-    for use_case in use_cases:
-        spec_metadata[use_case] = get_domain_case(spec_data, use_case)
+    reu_props=[]
+    new_props=[]
+
+
+
+    spec_metadata['reu_props'] = reu_props
+    spec_metadata['new_props'] = new_props
 
     spec_post.metadata=spec_metadata
 
@@ -53,7 +53,7 @@ class FrontMatterParser:
         self.path_to_json = '../json/'
         self.json_specs=get_spec_list(self.path_to_json)
         self.md_files_path='../_newSpecs/'
-        self.use_cases=['new_sdo','new_bsc','reu_sdo','reu_bsc']
+        self.use_cases=['new_sdo','reu_sdo','reu_bsc']
 
 
     def parse_front_matter(self):

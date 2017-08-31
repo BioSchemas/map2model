@@ -11,8 +11,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "softwareHelp",
@@ -24,8 +24,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "softwareRequirements",
@@ -38,8 +38,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "supportingData",
@@ -51,8 +51,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "accountablePerson",
@@ -64,8 +64,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "citation",
@@ -78,8 +78,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "description",
@@ -91,8 +91,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "name",
@@ -104,8 +104,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "publication",
@@ -117,8 +117,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "SoftwareApplication",
+         "domain_case": "reu_sdo"
       }
    ],
    "name": "Tool",

@@ -11,7 +11,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -25,7 +25,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -39,7 +39,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -52,7 +52,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -65,7 +65,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -80,7 +80,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -93,7 +93,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -106,7 +106,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -119,8 +119,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "alternateName",
@@ -132,8 +132,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "description",
@@ -145,8 +145,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "identifier",
@@ -160,8 +160,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "name",
@@ -173,8 +173,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "sameAs",
@@ -186,8 +186,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "url",
@@ -199,8 +199,8 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "biocoordinates",
@@ -212,8 +212,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "biologicalType",
@@ -225,8 +225,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "crossReference",
@@ -238,8 +238,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "isBasisFor",
@@ -253,8 +253,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "representation",
@@ -268,8 +268,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "taxon",
@@ -281,8 +281,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "Yes",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "CreativeWork",
+         "domain_case": "reu_sdo"
       }
    ],
    "name": "ProteinAnnotation",

@@ -11,7 +11,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -25,7 +25,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -39,7 +39,7 @@
          "marginality": "Optional",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -52,7 +52,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -65,7 +65,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -78,7 +78,7 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -92,8 +92,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "biocoordinates",
@@ -105,8 +105,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "biologicalType",
@@ -118,8 +118,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "crossReference",
@@ -131,8 +131,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "representation",
@@ -146,8 +146,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "taxon",
@@ -159,8 +159,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "Yes",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "isMentionedIn",
@@ -172,8 +172,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "additionalProperty",
@@ -185,8 +185,8 @@
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "alternateName",
@@ -198,8 +198,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "description",
@@ -211,8 +211,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "identifier",
@@ -226,8 +226,8 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "image",
@@ -240,8 +240,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "name",
@@ -253,8 +253,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "sameAs",
@@ -266,8 +266,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "url",
@@ -279,8 +279,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "BiologicalEntity",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       }
    ],
    "name": "Protein",

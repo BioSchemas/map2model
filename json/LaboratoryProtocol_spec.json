@@ -10,7 +10,7 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -24,7 +24,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -38,7 +38,7 @@
          "marginality": "Minimum",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -52,7 +52,7 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "CreativeWork",
+         "reused_from": "CreativeWork",
          "domain_case": "reu_sdo"
       },
       {
@@ -65,8 +65,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "limitation",
@@ -78,8 +78,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "applicability",
@@ -91,8 +91,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "reagent",
@@ -105,8 +105,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "new_sdo"
       },
       {
          "name": "purpose",
@@ -118,8 +118,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "outcome",
@@ -131,8 +131,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "category",
@@ -144,8 +144,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "isMentionedIn",
@@ -157,8 +157,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "device",
@@ -171,8 +171,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "sample",
@@ -185,8 +185,8 @@
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "actionApplication",
@@ -198,8 +198,8 @@
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       },
       {
          "name": "duration",
@@ -211,8 +211,8 @@
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "domain": "invalid domain type",
-         "domain_case": "new_bsc"
+         "reused_from": "Thing",
+         "domain_case": "reu_sdo"
       }
    ],
    "name": "LaboratoryProtocol",
