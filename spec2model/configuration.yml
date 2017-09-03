@@ -3,55 +3,55 @@ specifications:
     g_folder: Tool
     g_mapping_file: Tool Mapping
     status: revision
-    spec_type: None
-    github_url: None
+    spec_type: Profile
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : Beacon
     g_folder: Beacon
     g_mapping_file: Beacon Mapping
     status: revision
-    spec_type: None
-    github_url: None
+    spec_type: Profile
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : BiologicalEntity
     g_folder: BiologicalEntity
     g_mapping_file: BiologicalEntity Mapping
     status: revision
     spec_type: Type
-    github_url: https://github.com/BioSchemas/BiologicalEntity
+    use_cases_url: https://docs.google.com/document/d/1VxuYEcmjdFba4j9Klmuw0JFY_uCCYYTVsLfC5IbUneE/edit?usp=sharing
     version: 0.0.1
   - name : LaboratoryProtocol
     g_folder: LabProtocol
     g_mapping_file: LabProtocol Mapping
     status: revision
-    stereotype: Type
-    github_url: https://github.com/BioSchemas/LaboratoryProtocol
+    spec_type: Type
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : Protein
     g_folder: Protein
     g_mapping_file: Protein Mapping
     status: revision
-    spec_type: Type
-    github_url: https://github.com/BioSchemas/Proteins
+    spec_type: Profile
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : ProteinStructure
     g_folder: ProteinStructure
     g_mapping_file: ProteinStructure Mapping
     status: revision
     spec_type: Profile
-    github_url: https://github.com/BioSchemas/Proteins
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : ProteinAnnotation
     g_folder: ProteinAnnotation
     g_mapping_file: ProteinAnnotation Mapping
     status: revision
     spec_type: Profile
-    github_url: https://github.com/BioSchemas/Proteins
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
   - name : DataRepository
     g_folder: DataRepository
     g_mapping_file: DataRepository Mapping
     status: revision
-    stereotype: None
-    github_url: https://github.com/BioSchemas/DataRepositories
+    spec_type: Profile
+    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1

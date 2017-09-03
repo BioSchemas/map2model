@@ -10,10 +10,17 @@ qres = g.query("""prefix schema: <http://schema.org/>
                         ?property schema:domainIncludes  schema:SoftwareApplication .
                         ?property schema:rangeIncludes  ?range .
                         ?property rdfs:label ?label .
-                    } order by ?property """)
-
+                        ?property rdfs:comment ?description
+                    }""")
+temp_dic = {}
 for row in qres:
-    print(row)
+    labels=row.labels.keys()
+    labels_dic = {}
+    for label in labels:
+        labels_dic[label] = row[label]
+
+    temp_dic.
+print(temp_dic)
 
 
 

@@ -26,36 +26,33 @@ def get_expected_type(expected_types):
     return list_of_types
 
 
-def get_mapping_properties(mapping_sheet):
+def __get_dic_from_sheet_row(prop_name, parent_type, c_property):
+
+    property_as_dic = {}
+    #Set Bioschemas attributes
+    property_as_dic['bsc_dec'] = c_property['BSC Description'].strip().replace('\n', ' ')
+    property_as_dic['marginality'] = c_property['Minimum Fields'].replace('\n', ' ')
+    property_as_dic['cardinality'] = c_property['Cardinality'].strip().strip('\n').replace('\n', ' ')
+    property_as_dic['controlled_vocab'] = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
+
+
+
+    #Set schema.org attributes
+    property_as_dic['name'] = c_property['Property'].strip().strip('\n')
+    property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
+    property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
+
+    property_as_dic['spec_type'] = ''
+
+
+def get_mapping_properties(mapping_sheet, parent_type):
     list_of_hashes = mapping_sheet.get_all_records(head=5)
     type_properties = []
-    reused_from = 'Thing'
-    domain_case = 'new_sdo'
+
     for c_property in list_of_hashes:
-        property_as_dic = {}
-        property_value = c_property['Property']
-        marg_value = c_property['Minimum Fields']
-        # domain_case can have new_bsc (new property for Bioschema Type), new_sdo (New Property for Schema.org Type),
-        # reu_bsc (reuse a property from Bioschema Type), reu_sdo (Reuse Schema.org Type)
-        if (property_value.find('Reused properties from') == 0 and c_property['Description'] == '' and marg_value == ''):
-            reused_from = property_value[23:].strip()
-            domain_case = 'reu_sdo'
-        elif(property_value.find('New properties') == 0 and c_property['Description'] == '' and marg_value == ''):
-            reused_from = 'Thing'
-            domain_case = 'new_sdo'
-        elif (marg_value == "Minimum" or marg_value == "Recommended" or marg_value == "Optional"):
-            property_as_dic['name'] = c_property['Property'].strip().strip('\n')
-            if isSchemaorgType('http://schema.org/' + property_as_dic['name']):
-                domain_case='reu_sdo'
-            property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
-            property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
-            property_as_dic['bsc_dec'] = c_property['BSC Description'].strip().replace('\n', ' ')
-            property_as_dic['marginality'] = c_property['Minimum Fields'].replace('\n', ' ')
-            property_as_dic['cardinality'] = c_property['Cardinality'].strip().strip('\n').replace('\n', ' ')
-            property_as_dic['controlled_vocab'] = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
-            property_as_dic['reused_from'] = reused_from.strip().replace('\n', ' ')
-            property_as_dic['domain_case'] = domain_case.strip().replace('\n', ' ')
-            type_properties.append(property_as_dic)
+        prop_name = c_property['Property'].strip().strip('\n')
+        property_as_dic=__get_dic_from_sheet_row(prop_name, parent_type, c_property)
+        type_properties.append(property_as_dic)
     return type_properties
 
 
@@ -85,11 +82,14 @@ class JSONParser:
         mapping_description['g_mapping_file']=self.spec_metadata['g_mapping_file']
         mapping_description['spec_mapping_url']=self.spec_metadata['spec_mapping_url']
         mapping_description['status']=self.spec_metadata['status']
-        mapping_description['stereotype']=self.spec_metadata['stereotype']
-        mapping_description['github_url']=self.spec_metadata['github_url']
+        mapping_description['spec_type']=self.spec_metadata['spec_type']
+        mapping_description['gh_folder']='https://github.com/BioSchemas/'+self.spec_metadata['name']
+        mapping_description['gh_tasks']='https://github.com/BioSchemas/bioschemas/labels/type%3A%20'+self.spec_metadata['name']
+        mapping_description['edit_url']='https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/'+self.spec_metadata['name']+'.md'
         mapping_description['version']=self.spec_metadata['version']
         mapping_description['subtitle'] = mapping_sheet.acell('B1').value
         mapping_description['description'] = mapping_sheet.acell('B2').value
+        mapping_description['parent_type'] = mapping_sheet.acell('A6').value[8:].strip()
         return mapping_description
 
     def get_mapping_json(self):
