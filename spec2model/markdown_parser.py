@@ -29,7 +29,7 @@ class FrontMatterParser:
     md_files_path=''
 
     def __init__(self):
-        self.md_files_path='../_newSpecs/'
+        self.md_files_path='../specification_md_files/'
 
 
     def parse_front_matter(self, parsed_spec):
