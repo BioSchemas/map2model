@@ -2,6 +2,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import spec2model.config_manager as yml_manager
 
+
 class FolderDigger:
 
     gauth = "This variable will have the Google Authorization file"
@@ -32,7 +33,6 @@ class FolderDigger:
         self.specs_list = {}
         self.yml_config = yml_manager.YamlIO()
 
-
     def set_spec_file_id(self, file_id):
         self.specs_id=file_id
 
@@ -51,7 +51,6 @@ class FolderDigger:
                 return folder_file['id']
         return ''
 
-
     def __get_gfile_dic(self, current_cfg_yml, folder_id):
         folder_files=self.__get_spec_folder_files_by_id(folder_id)
         current_spec_g_file = current_cfg_yml['g_mapping_file']
@@ -63,6 +62,7 @@ class FolderDigger:
     def __get_bsc_specs(self, spec_config, spec_folder_files):
         specs_list = {}
         for current_config in spec_config:
+            print("Searching %s mapping file." % current_config['name'])
             spec_folder_id = self.__get_gfolder_id(current_config, spec_folder_files)
             spec_file_dic = self.__get_gfile_dic(current_config, spec_folder_id)
             current_config['spec_mapping_url'] = spec_file_dic['alternateLink']
@@ -70,9 +70,10 @@ class FolderDigger:
         return specs_list
 
     def get_specification_list(self):
+        print("Reading Configuration file.")
         self.yml_config.set_yml_path('../spec2model/configuration.yml')
         spec_config = self.yml_config.get_spec_yml_config()
         spec_folder_files = self.__get_spec_folder_files()
         all_bsc_specs=self.__get_bsc_specs(spec_config, spec_folder_files)
-
+        print("All mapping files obtained.")
         return all_bsc_specs

@@ -1,227 +1,208 @@
 {
-   "properties": [
+   "name": "LaboratoryProtocol",
+   "g_mapping_file": "LabProtocol Mapping",
+   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk",
+   "status": "revision",
+   "spec_type": "Type",
+   "gh_folder": "https://github.com/BioSchemas/LaboratoryProtocol",
+   "gh_tasks": "https://github.com/BioSchemas/bioschemas/labels/type%3A%20LaboratoryProtocol",
+   "edit_url": "https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/LaboratoryProtocol.md",
+   "version": "0.0.1",
+   "subtitle": "Bioschemas specification describing LabProtocol in the life-science.",
+   "description": "An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.\nExperimental protocols are fundamental information structures that support the description of the processes by means of which results are generated in experimental research [1]. Experimental protocols describe how the data were produced, the steps undertaken and conditions under which these steps were carried out.\n[1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop on Linked Science 2014- Making Sense Out of Data (LISC2014)\n",
+   "parent_type": "CreativeWork",
+   "hierarchy": [
+      "CreativeWork",
+      "Thing"
+   ],
+   "new_props": [
       {
-         "name": "identifier",
-         "expected_type": [
-            "PropertyValue, Text, URL"
-         ],
-         "sdo_desc": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
-         "bsc_dec": "",
-         "marginality": "Minimum",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "citation",
-         "expected_type": [
-            "CreativeWork",
-            "URL"
-         ],
-         "sdo_desc": "A citation or reference to a creative work, such as a publication, web page, scholarly article, etc.",
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "license",
-         "expected_type": [
-            "CreativeWork",
-            "URL"
-         ],
-         "sdo_desc": "A license document that applies to this content, typically indicated by URL.",
-         "bsc_dec": "",
-         "marginality": "Minimum",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "isBasedOn",
-         "expected_type": [
-            "CreativeWork",
-            "URL"
-         ],
-         "sdo_desc": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
          "name": "advantage",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "It should be made clear in which situations the Protocol has been successfully employed.",
+         "sdo_desc": "It should be made clear in which situations the Protocol has been successfully employed."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "limitation",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "It should be made clear in which situations the Protocol would be unreliable or otherwise unsuccessful.",
+         "sdo_desc": "It should be made clear in which situations the Protocol would be unreliable or otherwise unsuccessful."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "applicability",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
+         "sdo_desc": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc."
       },
       {
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "reagent",
          "expected_type": [
             "BiologicalEntity (chemicals)",
             "URL"
          ],
-         "sdo_desc": "Reagents participating in the list. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)",
+         "sdo_desc": "Reagents participating in the list. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)"
+      },
+      {
          "bsc_dec": "",
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "purpose",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "A goal towards an action is taken. Can be concrete or abstract.",
-         "bsc_dec": "",
-         "marginality": "Minimum",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "sdo_desc": "A goal towards an action is taken. Can be concrete or abstract."
       },
       {
+         "bsc_dec": "",
+         "marginality": "Recommended",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "outcome",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "outcome or expected result by a protocol execution.",
+         "sdo_desc": "outcome or expected result by a protocol execution."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
          "name": "category",
          "expected_type": [
             "Text"
          ],
-         "sdo_desc": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.",
+         "sdo_desc": "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
          "name": "isMentionedIn",
          "expected_type": [
             "Thing"
          ],
-         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions"
       },
       {
+         "bsc_dec": "",
+         "marginality": "Minimum",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "device",
          "expected_type": [
             "Text",
             "URL"
          ],
-         "sdo_desc": "Device required to run the application. Used in cases where a specific make/model is required to run the application.  For LabProtocols it would be a laboratory equipment.",
+         "sdo_desc": "Device required to run the application. Used in cases where a specific make/model is required to run the application.  For LabProtocols it would be a laboratory equipment."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
          "name": "sample",
          "expected_type": [
             "BiologicalEntity",
             "URL"
          ],
-         "sdo_desc": "Samples used in the protocol",
-         "bsc_dec": "",
-         "marginality": "Minimum",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "sdo_desc": "Samples used in the protocol"
       },
       {
+         "bsc_dec": "",
+         "marginality": "Recommended",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "actionApplication",
          "expected_type": [
             "SoftwareApplication"
          ],
-         "sdo_desc": "An application that can complete the request.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "sdo_desc": "An application that can complete the request."
       },
       {
-         "name": "duration",
-         "expected_type": [
-            "Duration"
-         ],
-         "sdo_desc": "The time it takes to actually carry on the protocol, in ISO 8601 duration format.",
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "name": "duration",
+         "expected_type": [
+            "Duration"
+         ],
+         "sdo_desc": "The time it takes to actually carry on the protocol, in ISO 8601 duration format."
       }
    ],
-   "name": "LaboratoryProtocol",
-   "g_mapping_file": "LabProtocol Mapping",
-   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1julB0P6kjXK_mL2dU8EDU9zMxIMah0_dYYeGt2Spllo/edit?usp=drivesdk",
-   "status": "revision",
-   "stereotype": "None",
-   "github_url": "https://github.com/BioSchemas/LaboratoryProtocol",
-   "version": "0.0.1",
-   "subtitle": "Bioschemas specification describing LabProtocol in the life-science.",
-   "description": "An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.\nExperimental protocols are fundamental information structures that support the description of the processes by means of which results are generated in experimental research [1]. Experimental protocols describe how the data were produced, the steps undertaken and conditions under which these steps were carried out.\n[1]  Giraldo, O., Garcia, A., Corcho, O.: SMART Protocols: SeMAntic RepresenTation for Experimental Protocols, Riva del Garda, Trentino, Italy (2014). 4th Workshop on Linked Science 2014- Making Sense Out of Data (LISC2014)\n"
+   "extended_props": {
+      "Thing": [
+         {
+            "bsc_dec": "",
+            "marginality": "Minimum",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "identifier",
+            "expected_type": [
+               "PropertyValue, Text, URL"
+            ],
+            "sdo_desc": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details."
+         }
+      ],
+      "CreativeWork": [
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "citation",
+            "expected_type": [
+               "CreativeWork",
+               "URL"
+            ],
+            "sdo_desc": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Minimum",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "license",
+            "expected_type": [
+               "CreativeWork",
+               "URL"
+            ],
+            "sdo_desc": "A license document that applies to this content, typically indicated by URL."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "isBasedOn",
+            "expected_type": [
+               "CreativeWork",
+               "URL"
+            ],
+            "sdo_desc": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+         }
+      ]
+   }
 }

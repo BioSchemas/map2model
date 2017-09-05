@@ -1,391 +1,348 @@
 {
-   "properties": [
+   "name": "BiologicalEntity",
+   "g_mapping_file": "BiologicalEntity Mapping",
+   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc/edit?usp=drivesdk",
+   "status": "revision",
+   "spec_type": "Type",
+   "gh_folder": "https://github.com/BioSchemas/BiologicalEntity",
+   "gh_tasks": "https://github.com/BioSchemas/bioschemas/labels/type%3A%20BiologicalEntity",
+   "edit_url": "https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/BiologicalEntity.md",
+   "version": "0.0.1",
+   "subtitle": "Bioschemas specification describing BiologicalEntity in the life-science",
+   "description": "The BiologicalEntity aims to encompasses as much as possible biological types such as \u201csamples\u201d, \u201cprotein\u201d, \u201cprotein annotation\u201d, \u201cprotein structure\u201d, \u201cphenotype\u201d and so on. Most of the properties here will be optional as the specific profiles, i.e., a tailored usage of BiologicalEntitty, will provide stronger requirements whenever needed.\nMost of the new properties belong to BiologicalEntity but some required changes at a different level in schema.org. That is why we also have some new properties for CreativeWork and Thing.",
+   "parent_type": "CreativeWork",
+   "hierarchy": [
+      "CreativeWork",
+      "Thing"
+   ],
+   "new_props": [
       {
-         "name": "citation",
-         "expected_type": [
-            "CreativeWork",
-            "URL"
-         ],
-         "sdo_desc": "A citation or reference to a creative work, such as a publication, web page, scholarly article, etc.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "dateCreated",
-         "expected_type": [
-            "Date",
-            "DateTime"
-         ],
-         "sdo_desc": "The date on which the CreativeWork/BiologicalEntity was created or the item was added to a DataFeed/Dataset/DataRepository.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "dateModified",
-         "expected_type": [
-            "Date",
-            "DateTime"
-         ],
-         "sdo_desc": "The date on which the CreativeWork/BiologicalEntity was most recently modified or when the item's entry was modified within a DataFeed/Dataset/DataRepository.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "datePublished",
-         "expected_type": [
-            "Date"
-         ],
-         "sdo_desc": "Date of first broadcast/publication.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "distribution",
-         "expected_type": [
-            "DataDownload"
-         ],
-         "sdo_desc": "A downloadable form of this entity, at a specific location, in a specific format",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "hasPart",
-         "expected_type": [
-            "BiologicalEntity"
-         ],
-         "sdo_desc": "Indicates a BiologicalEntity that is (in some sense) a part of this BiologicalEntity. Inverse property: isPartOf.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "isBasedOn",
-         "expected_type": [
-            "CreativeWork",
-            "URL",
-            "BiologicalEntity"
-         ],
-         "sdo_desc": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "isPartOf",
-         "expected_type": [
-            "BiologicalEntity"
-         ],
-         "sdo_desc": "Indicates a BiologicalEntity that this BiologicalEntity is (in some sense) part of.  Inverse property: hasPart.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "location",
-         "expected_type": [
-            "Place"
-         ],
-         "sdo_desc": "Position where this entity is located or originates from (e.g. an entity from Polynesia islands or an Anatomical location. If multiple locations with multiple purposes (collection, storage) should be modelled, please use the additionalProperty from Place to specify this.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "measurementTechnique",
-         "expected_type": [
-            "Text, url, PropertyValue"
-         ],
-         "sdo_desc": "To describe the process used to obtain a biological entity or which is associated with that entity (i.e procedure to obtain it or measure/characterise it)",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "CreativeWork",
-         "domain_case": "reu_sdo"
-      },
-      {
          "name": "associatedDisease",
          "expected_type": [
             "MedicalCondition",
             "URL"
          ],
-         "sdo_desc": "Disease associated to this protein feature",
+         "sdo_desc": "Disease associated to this protein feature"
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "biocoordinates",
          "expected_type": [
             "QuantitativeValue"
          ],
-         "sdo_desc": "Coordinates in a 1 or 2D space, for instance length/coordinates in a sequence.  Usage (example): Use a QuantitativeValue with properties minValue and maxValue for a region or value for a site in a Protein. Use it only with value for a protein length.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
+         "sdo_desc": "Coordinates in a 1 or 2D space, for instance length/coordinates in a sequence.  Usage (example): Use a QuantitativeValue with properties minValue and maxValue for a region or value for a site in a Protein. Use it only with value for a protein length."
       },
       {
-         "name": "biologicalType",
-         "expected_type": [
-            "Text"
-         ],
-         "sdo_desc": "List with types preferably supported by BioSchemas-> enumeration list of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation). If the value is not on the list then the data will still be parsed but only generic properties will be validated. {population,individual,tissue,cell,molecule,protein,nucleic acid}",
          "bsc_dec": "",
          "marginality": "Minimum",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
+         "name": "biologicalType",
+         "expected_type": [
+            "Text"
+         ],
+         "sdo_desc": "List with types preferably supported by BioSchemas-> enumeration list of values maintained on a wikipage (cf accessibilityAPI in schema.org for implementation). If the value is not on the list then the data will still be parsed but only generic properties will be validated. {population,individual,tissue,cell,molecule,protein,nucleic acid}"
       },
       {
+         "bsc_dec": "",
+         "marginality": "Optional",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "crossReference",
          "expected_type": [
             "Thing"
          ],
-         "sdo_desc": "A pointer to another, somehow related entity. Usage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other more specific does not work.",
+         "sdo_desc": "A pointer to another, somehow related entity. Usage: Whenever isBasedOn/isBasisFor, isPartOf/hasPart, citation or any other more specific does not work."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "phenotype",
          "expected_type": [
             "Text, Url, PropertyValue"
          ],
-         "sdo_desc": "To associate a biological entity to phenotypic information , whether the entity presents the phenotype or causes it.",
+         "sdo_desc": "To associate a biological entity to phenotypic information , whether the entity presents the phenotype or causes it."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "representation",
          "expected_type": [
             "Text",
             "URL",
             "PropertyValue"
          ],
-         "sdo_desc": "Representation of this entity. For instance, chemical structure or sequence",
+         "sdo_desc": "Representation of this entity. For instance, chemical structure or sequence"
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "sample",
          "expected_type": [
             "BiologicalEntity",
             "URL"
          ],
-         "sdo_desc": "Clarify usage...",
+         "sdo_desc": "Clarify usage..."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
+         "controlled_vocab": "ncbitaxon:http://purl.bioontology.org/ontology/NCBITAXON/, uniprottaxon:http://purl.uniprot.org/taxonomy/",
          "name": "taxon",
          "expected_type": [
             "URL"
          ],
-         "sdo_desc": "A url pointing to NCBI Taxonomy or a taxonomic resource",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "MANY",
-         "controlled_vocab": "Yes",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
+         "sdo_desc": "A url pointing to NCBI Taxonomy or a taxonomic resource"
       },
       {
-         "name": "isMentionedIn",
-         "expected_type": [
-            "Thing"
-         ],
-         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions",
          "bsc_dec": "",
          "marginality": "Recommended",
          "cardinality": "ONE",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
+         "name": "isMentionedIn",
+         "expected_type": [
+            "Thing"
+         ],
+         "sdo_desc": "CretiveWork, Dataset, collection mentioning this entity  Inverse of:mentions"
       },
       {
+         "bsc_dec": "",
+         "marginality": "Optional",
+         "cardinality": "MANY",
+         "controlled_vocab": "",
          "name": "isBasisFor",
          "expected_type": [
             "CreativeWork",
             "URL",
             "BiologicalEntity"
          ],
-         "sdo_desc": "A resource for which this resource has been used for the creation of the former.  Inverse property: isBasedOn",
+         "sdo_desc": "A resource for which this resource has been used for the creation of the former.  Inverse property: isBasedOn"
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "new_sdo"
-      },
-      {
          "name": "additionalProperty",
          "expected_type": [
             "PropertyValue"
          ],
-         "sdo_desc": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.",
+         "sdo_desc": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org."
+      },
+      {
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "name": "distribution",
+         "expected_type": [
+            "DataDownload"
+         ],
+         "sdo_desc": "A downloadable form of this entity, at a specific location, in a specific format"
       },
       {
-         "name": "alternateName",
-         "expected_type": [
-            "Text"
-         ],
-         "sdo_desc": "An alias for the item.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "MANY",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "description",
-         "expected_type": [
-            "Text"
-         ],
-         "sdo_desc": "A description of the item.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "identifier",
-         "expected_type": [
-            "PropertyValue",
-            "Text",
-            "URL"
-         ],
-         "sdo_desc": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details. Recommendation: identifiers.org whenever possible",
-         "bsc_dec": "",
-         "marginality": "Minimum",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "image",
-         "expected_type": [
-            "ImageObject",
-            "URL"
-         ],
-         "sdo_desc": "An image of the item. This can be a URL or a fully described ImageObject.",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "name": "location",
+         "expected_type": [
+            "Place"
+         ],
+         "sdo_desc": "Position where this entity is located or originates from (e.g. an entity from Polynesia islands or an Anatomical location. If multiple locations with multiple purposes (collection, storage) should be modelled, please use the additionalProperty from Place to specify this."
       },
       {
-         "name": "name",
-         "expected_type": [
-            "Text"
-         ],
-         "sdo_desc": "The name of the item.",
-         "bsc_dec": "",
-         "marginality": "Recommended",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "sameAs",
-         "expected_type": [
-            "URL"
-         ],
-         "sdo_desc": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
          "bsc_dec": "",
          "marginality": "Optional",
          "cardinality": "MANY",
          "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
-      },
-      {
-         "name": "url",
+         "name": "measurementTechnique",
          "expected_type": [
-            "URL"
+            "Text, url, PropertyValue"
          ],
-         "sdo_desc": "URL of the item.",
-         "bsc_dec": "",
-         "marginality": "Optional",
-         "cardinality": "ONE",
-         "controlled_vocab": "",
-         "reused_from": "Thing",
-         "domain_case": "reu_sdo"
+         "sdo_desc": "To describe the process used to obtain a biological entity or which is associated with that entity (i.e procedure to obtain it or measure/characterise it)"
       }
    ],
-   "name": "BiologicalEntity",
-   "g_mapping_file": "BiologicalEntity Mapping",
-   "spec_mapping_url": "https://docs.google.com/spreadsheets/d/1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc/edit?usp=drivesdk",
-   "status": "revision",
-   "stereotype": "None",
-   "github_url": "https://github.com/BioSchemas/BiologicalEntity",
-   "version": "0.0.1",
-   "subtitle": "Bioschemas specification describing BiologicalEntity in the life-science",
-   "description": "The BiologicalEntity aims to encompasses as much as possible biological types such as \u201csamples\u201d, \u201cprotein\u201d, \u201cprotein annotation\u201d, \u201cprotein structure\u201d, \u201cphenotype\u201d and so on. Most of the properties here will be optional as the specific profiles, i.e., a tailored usage of BiologicalEntitty, will provide stronger requirements whenever needed.\nMost of the new properties belong to BiologicalEntity but some required changes at a different level in schema.org. That is why we also have some new properties for CreativeWork and Thing."
+   "extended_props": {
+      "CreativeWork": [
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "citation",
+            "expected_type": [
+               "CreativeWork",
+               "URL"
+            ],
+            "sdo_desc": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "dateCreated",
+            "expected_type": [
+               "Date",
+               "DateTime"
+            ],
+            "sdo_desc": "The date on which the CreativeWork was created or the item was added to a DataFeed."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "dateModified",
+            "expected_type": [
+               "Date",
+               "DateTime"
+            ],
+            "sdo_desc": "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "datePublished",
+            "expected_type": [
+               "Date"
+            ],
+            "sdo_desc": "Date of first broadcast/publication."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "hasPart",
+            "expected_type": [
+               "BiologicalEntity"
+            ],
+            "sdo_desc": "Indicates a CreativeWork that is (in some sense) a part of this CreativeWork."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "isBasedOn",
+            "expected_type": [
+               "CreativeWork",
+               "URL",
+               "BiologicalEntity"
+            ],
+            "sdo_desc": "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "isPartOf",
+            "expected_type": [
+               "BiologicalEntity"
+            ],
+            "sdo_desc": "Indicates a CreativeWork that this CreativeWork is (in some sense) part of."
+         }
+      ],
+      "Thing": [
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "alternateName",
+            "expected_type": [
+               "Text"
+            ],
+            "sdo_desc": "An alias for the item."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "description",
+            "expected_type": [
+               "Text"
+            ],
+            "sdo_desc": "A description of the item."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Minimum",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "identifier",
+            "expected_type": [
+               "PropertyValue",
+               "Text",
+               "URL"
+            ],
+            "sdo_desc": "The identifier property represents any kind of identifier for any kind of <a class=\"localLink\" href=\"http://schema.org/Thing\">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See <a href=\"/docs/datamodel.html#identifierBg\">background notes</a> for more details."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "image",
+            "expected_type": [
+               "ImageObject",
+               "URL"
+            ],
+            "sdo_desc": "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Recommended",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "name",
+            "expected_type": [
+               "Text"
+            ],
+            "sdo_desc": "The name of the item."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "MANY",
+            "controlled_vocab": "",
+            "name": "sameAs",
+            "expected_type": [
+               "URL"
+            ],
+            "sdo_desc": "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website."
+         },
+         {
+            "bsc_dec": "",
+            "marginality": "Optional",
+            "cardinality": "ONE",
+            "controlled_vocab": "",
+            "name": "url",
+            "expected_type": [
+               "URL"
+            ],
+            "sdo_desc": "URL of the item."
+         }
+      ]
+   }
 }
