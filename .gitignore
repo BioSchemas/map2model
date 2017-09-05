@@ -1,5 +1,6 @@
 
 spec2model/mycreds.txt
+spec2model/__pycache__/
 .idea/libraries/R_User_Library.xml
 .idea/misc.xml
 .idea/modules.xml
