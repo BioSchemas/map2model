@@ -12,3 +12,4 @@ test/sdo-bioschemas-client.json
 /.idea/
 /spec2model/mycreds.txt
 /spec2model/sdo-bioschemas-client.json
+/test/client_secrets.json
