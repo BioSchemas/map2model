@@ -10,14 +10,14 @@ This repository will help people interested in defining a Bioschemas Specificati
 
 Here you will find all the templates and documentation needed to be familiar with the Specification Process.
 
-In the following README you will have the process to create:
+In the following README you have the process needed to create a Bioschemas Specification:
 1. Use Case Study
 1. Mapping
 1. Specification
 1. Markdown
 1. RDFa
 
-> These explanations will be supported by an example of the **Bioscheas Tools Specification**.
+> For this expalantion, the **Bioscheas Tool Specification** will be used as the specification sample.
 
 ## 1. USE CASE STUDY
 > Section under construction.
@@ -39,15 +39,15 @@ After Defining the properties, the Schema.org type and you will need to follow t
     1. **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
     1. **Description:**: Description of the property from the schema.org vocabulary for the selected type.
   + **bioschemas:** These columns are defined for the properties that will be in the Bioschemas Specification file.
-    1. **SubProperties:** The subproperties of an specific property, should be listed inn the following format <subProperty_Name>: <subProperty_Type> and if you have multiples subproperties they should be separated by coma (,) as in this example  <subProperty_Name1>: <subProperty_Type1>, <subProperty_Name2>: <subProperty_Type2>, <subProperty_Name3>: <subProperty_Type3>... and so on.
-    1. **Minimum Fields:** The template gives three options for the property specification of the new Bioschemas Type, Minimum, Recomended or Optional. 
+    1. **BSC Description:** If is considered an additional description for the property, here can be aded an additional text that complements the schema.org description.
+    1. **Marginality:** The template gives three options for the property specification of the new Bioschemas Type, Minimum, Recomended or Optional. 
     1. **Cardinalitry:**	The template gives you the two possible cardinalyties in a Bioschemas Specification (ONE or Many).
     1. **Controlled Vocabulary:** 
-      + A list of words separated by comas (,) precedeed by the Word "LIST - " 
-        > "<LIST - ONE, TWO, THREE...>"
-  
-      + A list of ontologies following the syntax <Ontology_Name>:<Ontology_URL>, if you need to put more than one separate eachontology with comas (,), the ontology list should be preceeded by the word "ONTOLOGY - ".
-        > "<ONTOLOGY - ontologyname1:URL1, ontologyname2:URL2, ontologyname3:URL3...>"
+      + This field contains a list of terms or ontologies, terms are words, that are separated by a coma, and an onlology is composed by a name_space:url.
+      > This are three possible accepted values:
+      > 1. red, green, blue, pallete3:htt://ontlology.pallete3.org
+      > 1. pallete1:htt://ontlology.pallete1.org, pallete2:htt://ontlology.pallete2.org, pallete3:htt://ontlology.pallete3.org
+      > 1. red, green, blue, white
    
   + **USE CASE**
     - **USE CASE NAME**
