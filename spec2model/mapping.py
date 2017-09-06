@@ -1,6 +1,4 @@
 import gspread
-import requests
-import json
 from oauth2client.service_account import ServiceAccountCredentials
 from rdflib import ConjunctiveGraph
 
@@ -103,6 +101,21 @@ def get_expected_type(expected_types):
     return list_of_types
 
 
+def _parse_controlled_vocabulary(temp_cont_vocab):
+    cv_parsed = {'terms':[] , 'ontologies':[]}
+    element_list = temp_cont_vocab.split(',')
+    for element in element_list:
+        if ':' in element:
+            temp_onto = element.split(":",1)
+            ontology = {}
+            ontology['name'] = temp_onto[0].strip()
+            ontology['url'] = temp_onto[1].strip()
+            cv_parsed['ontologies'].append(ontology)
+        elif element != '':
+            cv_parsed['terms'].append(element)
+    return cv_parsed
+
+
 def __get_dic_from_sheet_row(c_property):
 
     property_as_dic = {}
@@ -112,7 +125,8 @@ def __get_dic_from_sheet_row(c_property):
     property_as_dic['bsc_dec'] = c_property['BSC Description'].strip().replace('\n', ' ')
     property_as_dic['marginality'] = c_property['Marginality'].replace('\n', ' ')
     property_as_dic['cardinality'] = c_property['Cardinality'].strip().strip('\n').replace('\n', ' ')
-    property_as_dic['controlled_vocab'] = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
+    temp_cont_vocab = c_property['Controlled Vocabulary'].strip().replace('\n', ' ')
+    property_as_dic['controlled_vocab'] = _parse_controlled_vocabulary(temp_cont_vocab)
 
 
     # Set schema.org attributes
@@ -221,6 +235,4 @@ class GSheetsParser:
 
         spec_description.update(formatted_props)
 
-        self.bsc_specification.update(spec_description)
-
-        return self.bsc_specification
+        return spec_description
