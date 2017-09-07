@@ -20,7 +20,7 @@ map2model is a Python module developed to facilitate [Bioschemas Groups](http://
 1. Install Python dependencies with ```pip install -r requirements.txt```.
 1. Run the map2model module with the command ```python run.py```.
 1. Once the module succesfuly runned, create a pull request to update the folder ```docs\specification_md_files\```.
-> Updates will be loaded to http://bioschemas.org when the pull request is merged to the master branch.
+> Updates will be loaded to http://bioschemas.org/newSpecs/ when the pull request is merged to the master branch.
 
 # Bioschemas Specification Process
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
