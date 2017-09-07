@@ -2,7 +2,7 @@
 
 map2model is a Python module developed to facilitate [Bioschemas Groups](http://bioschemas.org/groups/) in the specification proposal process.
 
-## How to excecute
+## Run the module in your computer
 1. Clone the repository: ```git clone https://github.com/BioSchemas/bioschemas-map2model.git```
 1. Go to ![APIs Console](https://console.developers.google.com/iam-admin/projects) and make your own project.
 1. Search for ‘Google Drive API’, select the entry, and click ‘Enable’.
@@ -17,7 +17,7 @@ map2model is a Python module developed to facilitate [Bioschemas Groups](http://
       - Rename the JSON to client_secrets.json and paste in the root of the cloned repository
 1. Open the Terminal or Console application of your Operating System and go to the folder where you cloned the repository.
 1. Execute the module ```python run.py```
-1. Once the module runned succesfuly, create a pull request to update the folder ```docs\specification_md_files
+1. Once the module runned succesfuly, create a pull request to update the folder ```docs\specification_md_files\```
 
 # Bioschemas Specification Process
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
