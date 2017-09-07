@@ -5,7 +5,7 @@ map2model is a Python library developed to facilitate [Bioschemas Groups](http:/
 # Bioschemas Specification Process
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
 
-![Bioschemas Specification Process](../master/img/specification_process.jpg)
+![Bioschemas Specification Process](../master/docs/img/specification_process.jpg)
 > If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder wiht the name **specification_process.jpg**.
 
 Here you will find all the templates and documentation needed to be familiar with the Specification Process.
@@ -28,11 +28,11 @@ After Defining the properties, the Schema.org type and you will need to follow t
 
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
       > Folder for Bioschemas Tool Specification
-      ![Bioschemas Tool Folder](../master/img/specification_folder.png)
+      ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
 
 2. Open the Mapping template and you will find the following structure.
 
-    ![Bioschemas Tools Mapping empty file](../master/img/mapping_empty_file.png)
+    ![Bioschemas Tools Mapping empty file](../master/docs/img/mapping_empty_file.png)
 
   + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
     1. **Property:** Name of the property from the selected schema.org type.
@@ -65,23 +65,23 @@ After Defining the properties, the Schema.org type and you will need to follow t
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
 
       > For the Tools Specificationin the Use Case Study was identified that the Schema.or Type [SoftwareApplication](http://schema.org/SoftwareApplication) is the one that fits the most with all the Use Cases.
-      ![Schema.org Type Definition](../master/img/schema_org_type.png)
+      ![Schema.org Type Definition](../master/docs/img/schema_org_type.png)
 
 4. Copy the Type definition table, starting from the firts Property, don't copy the table headers.
 
     > For the SoftwareApplication example it should look like this.
-    ![Copy Schema.org Type Definition](../master/img/schema_org_type_copy.png)
+    ![Copy Schema.org Type Definition](../master/docs/img/schema_org_type_copy.png)
 
 5. Then paste into your mapping Spreadsheet starting in **A6 Cell**.
 
     >  For the Tools Specification you would have something like this.
-    ![Pasting Schema.org Type Definition to the mapping Template](../master/img/schema_org_paste_template.png)
+    ![Pasting Schema.org Type Definition to the mapping Template](../master/docs/img/schema_org_paste_template.png)
 
 
 6. Fill all the Use Cases for this Specification
 
     >  For the Tools Specification you would have something like this. The template gives you diferent colors for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light ornge for No Match).
-    ![Filling the Use Cases in the Mapping Template](../master/img/fill_mapping_template_UC.png)
+    ![Filling the Use Cases in the Mapping Template](../master/docs/img/fill_mapping_template_UC.png)
 
 7. Fill the Bioschemas Fields
   + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
@@ -100,11 +100,11 @@ After Defining the properties, the Schema.org type and you will need to follow t
         > "<ONTOLOGY - ontologyname1:URL1, ontologyname2:URL2, ontologyname3:URL3...>"
 
     >  For the Tools Specification you would have something like this.
-    ![Fill the Bioschemas Fields](../master/img/bioschemas_mapping.png)
+    ![Fill the Bioschemas Fields](../master/docs/img/bioschemas_mapping.png)
 
 8. Go to the Bioschemas fields Sheet to view the summary of your mapping
       > For the Tools Specification you would have something like this.
-      ![Mapping Summary](../master/img/mapping_summary.png)
+      ![Mapping Summary](../master/docs/img/mapping_summary.png)
       > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
 
 ## 3. SPECIFICATION
@@ -119,7 +119,7 @@ The **G-DOCS Specification** is thought to be a way for having a realtime feedba
 
    1. Make a copy of the [specification template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> specification** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
       > Folder for Bioschemas Tool Specification
-      ![Bioschemas Tool Folder](../master/img/specification_folder.png)
+      ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
       
    1. First Copy the 
 
