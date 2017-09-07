@@ -2,6 +2,7 @@ from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 import spec2model.config_manager as yml_manager
 
+config_file_path = 'spec2model/configuration.yml'
 
 class FolderDigger:
 
@@ -11,7 +12,7 @@ class FolderDigger:
     yml_config = ''
 
     def __init__(self):
-        creds_path="../spec2model/mycreds.txt"
+        creds_path="spec2model/mycreds.txt"
         self.gauth = GoogleAuth()
         # Try to load saved client credentials
         self.gauth.LoadCredentialsFile(creds_path)
@@ -71,7 +72,7 @@ class FolderDigger:
 
     def get_specification_list(self):
         print("Reading Configuration file.")
-        self.yml_config.set_yml_path('../spec2model/configuration.yml')
+        self.yml_config.set_yml_path(config_file_path)
         spec_config = self.yml_config.get_spec_yml_config()
         spec_folder_files = self.__get_spec_folder_files()
         all_bsc_specs=self.__get_bsc_specs(spec_config, spec_folder_files)

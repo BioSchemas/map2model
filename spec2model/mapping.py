@@ -1,4 +1,5 @@
 import gspread
+from pydrive.auth import GoogleAuth
 from oauth2client.service_account import ServiceAccountCredentials
 from rdflib import ConjunctiveGraph
 
@@ -180,16 +181,32 @@ def get_mapping_properties(mapping_sheet):
 class GSheetsParser:
     gsheet_id = ''
     cred_file = ''
+    gauth = "This variable will have the Google Authorization file"
     scope = []
     spec_metadata={}
     bsc_specification = {}
 
     def __init__(self):
         self.gsheet_id = '1h0-fgqnRe25-tVCmu2yWNQjthLzgkW4a1TVNMpCABlc'
-        self.cred_file = '../spec2model/sdo-bioschemas-client.json'
-        self.scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+        #self.cred_file = 'client_secrets.json'
+        #self.scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
         self.spec_metadata={}
         self.bsc_specification = {}
+        creds_path="spec2model/mycreds.txt"
+        self.gauth = GoogleAuth()
+        # Try to load saved client credentials
+        self.gauth.LoadCredentialsFile(creds_path)
+        if self.gauth.credentials is None:
+            # Authenticate if they're not there
+            self.gauth.LocalWebserverAuth()
+        elif self.gauth.access_token_expired:
+            # Refresh them if expired
+            self.gauth.Refresh()
+        else:
+            # Initialize the saved creds
+            self.gauth.Authorize()
+            # Save the current credentials to a file
+            self.gauth.SaveCredentialsFile(creds_path)
 
     def set_gsheet_id(self, gsheet_id):
         self.gsheet_id = gsheet_id
@@ -216,8 +233,11 @@ class GSheetsParser:
 
     def get_mapping_g_sheets(self):
 
-        creds = ServiceAccountCredentials.from_json_keyfile_name(self.cred_file, self.scope)
-        client = gspread.authorize(creds)
+        #creds = ServiceAccountCredentials.from_json_keyfile_name(self.cred_file, self.scope)
+
+        client = gspread.authorize(self.gauth.credentials)
+
+        #client = gspread.authorize(creds)
         print("Parsing %s file." % self.spec_metadata['g_mapping_file'])
         mapping_sheet = client.open_by_key(self.gsheet_id).get_worksheet(0)
 

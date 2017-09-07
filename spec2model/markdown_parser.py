@@ -10,7 +10,7 @@ class FrontMatterParser:
     bsc_spec_list = ''
 
     def __init__(self):
-        self.md_files_path='../specification_md_files/'
+        self.md_files_path='docs/specification_md_files/'
         self.bsc_file_manager = f_manager.FolderDigger()
         self.bsc_parser = mapper.GSheetsParser()
 

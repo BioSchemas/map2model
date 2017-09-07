@@ -5,7 +5,7 @@ class YamlIO:
     yaml= ''
 
     def __init__(self):
-        self.yml_path = '../spec2model/configuration.yml'
+        self.yml_path = 'configuration.yml'
         self.yaml = YAML()
 
     def set_yml_path(self, file_path):
