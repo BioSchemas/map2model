@@ -4,7 +4,8 @@ map2model is a Python module developed to facilitate [Bioschemas Groups](http://
 
 ## Run the module in your computer
 1. Clone the repository: ```git clone https://github.com/BioSchemas/bioschemas-map2model.git```
-1. Go to ![APIs Console](https://console.developers.google.com/iam-admin/projects) and make your own project.
+1. Add the ![Bioschemas GDrive](https://drive.google.com/drive/folders/0B8yXU9SkT3ftaWJtTGYyTTJjck0?usp=sharing) to your Google Account Drive.
+1. Go to ![Google's APIs Console](https://console.developers.google.com/iam-admin/projects) and make your own project.
 1. Search for ‘Google Drive API’, select the entry, and click ‘Enable’.
 1. Select ‘Credentials’ from the left menu, click ‘Create Credentials’, select ‘OAuth client ID’.
 1. Now, the product name and consent screen need to be set -> click ‘Configure consent screen’ and follow the instructions. Once finished:
@@ -16,8 +17,10 @@ map2model is a Python module developed to facilitate [Bioschemas Groups](http://
       - Click ‘Download JSON’ on the right side of Client ID to download client_secret_<really long ID>.json.
       - Rename the JSON to client_secrets.json and paste in the root of the cloned repository
 1. Open the Terminal or Console application of your Operating System and go to the folder where you cloned the repository.
-1. Execute the module ```python run.py```
-1. Once the module runned succesfuly, create a pull request to update the folder ```docs\specification_md_files\```
+1. Install Python dependencies with ```pip install -r requirements.txt```.
+1. Run the map2model module with the command ```python run.py```.
+1. Once the module succesfuly runned, create a pull request to update the folder ```docs\specification_md_files\```.
+> Updates will be loaded to http://bioschemas.org when the pull request is merged to the master branch.
 
 # Bioschemas Specification Process
 This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
@@ -137,8 +140,6 @@ The **G-DOCS Specification** is thought to be a way for having a realtime feedba
    1. Make a copy of the [specification template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> specification** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
       > Folder for Bioschemas Tool Specification
       ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
-      
-   1. First Copy the 
 
 ### 3.2. MARKDOWN SPECIFICATION
 
