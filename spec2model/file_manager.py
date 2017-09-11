@@ -27,6 +27,8 @@ class FolderDigger:
             self.gauth.Authorize()
             # Save the current credentials to a file
             self.gauth.SaveCredentialsFile(creds_path)
+        # Save the current credentials to a file
+        self.gauth.SaveCredentialsFile(creds_path)
 
         self.drive = GoogleDrive(self.gauth)
         #This is the id of the folder Specification

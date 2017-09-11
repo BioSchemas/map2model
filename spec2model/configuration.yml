@@ -55,3 +55,10 @@ specifications:
     spec_type: Profile
     use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
+  - name : Event
+    g_folder: Event
+    g_mapping_file: Event mapping
+    status: revision
+    spec_type: Profile
+    use_cases_url:
+    version: 0.0.1
