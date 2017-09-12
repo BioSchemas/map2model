@@ -4,7 +4,7 @@ map2model is a Python module developed to facilitate [Bioschemas Groups](http://
 
 ## Run the module in your computer
 1. Clone the repository: ```git clone https://github.com/BioSchemas/bioschemas-map2model.git```
-1. Add the [Bioschemas GDrive Folder](https://drive.google.com/open?id=0B8yXU9SkT3ftaWJtTGYyTTJjck0) to your Google Account Drive. (Right click th folder and select Add to my Drive)
+1. Add the [Bioschemas GDrive Folder](https://drive.google.com/open?id=0B8yXU9SkT3ftaWJtTGYyTTJjck0) to your Google Account Drive. (In your Gooogle Drive Account go to Shared with me, right click the Bioschemas.org folder and select Add to my Drive)
 1. Go to [Google's APIs Console](https://console.developers.google.com/iam-admin/projects) and make your own project.
 1. Search for ‘Google Drive API’, select the entry, and click ‘Enable’.
 1. Select ‘Credentials’ from the left menu, click ‘Create Credentials’, select ‘OAuth client ID’.
