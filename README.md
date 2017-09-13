@@ -2,8 +2,8 @@
 
 **map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
 
-![Bioschemas Specification Process](../master/docs/img/specification_process.jpg)
-> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder with the name **specification_process.jpg**.
+![map2model workflow](../master/docs/img/map2model_workflow.jpg)
+> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in img folder with the name **map2model_workflow.jpg**.
 
 **map2model** retrieves properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularies) from Bioschemas mapping **GDrive** files, then classifies properties into two groups:
 1. **Extended properties:** Properties that are part of the extended schema.org Type. 
