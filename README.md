@@ -6,8 +6,10 @@
 > If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder wiht the name **specification_process.jpg**.
 
 **map2model** retreives properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularries) from Bioschemas mapping **GDrive** files, classify properties in two groups:
+
       1. **Extended Properties:** Properties that are part of the extended schema.org Type. 
-      2. **New Properties:** Properties that are new to schema.org vocabulary or are completely new to the schema.org
+      1. **New Properties:** Properties that are new to schema.org vocabulary or are completely new to the schema.org.
+      
 After Classifing the properties, it generates a Markdown file that can be interpreted by Bioschemas.org Jekyll implementation and are easy to visualize by end users.
 
 Comments to each specifications should be done by github to keep track of them and execute the corrections to each specification.
