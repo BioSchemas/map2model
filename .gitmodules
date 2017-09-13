@@ -1,0 +1,3 @@
+[submodule "docs/specifications_md_files"]
+	path = docs/specifications_md_files
+	url = https://github.com/BioSchemas/Specifications

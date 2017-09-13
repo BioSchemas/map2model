@@ -13,9 +13,9 @@ specifications:
     spec_type: Profile
     use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
     version: 0.0.1
-  - name : BiologicalEntity
-    g_folder: BiologicalEntity
-    g_mapping_file: BiologicalEntity Mapping
+  - name : PhysicalEntity
+    g_folder: PhysicalEntity
+    g_mapping_file: PhysicalEntity Mapping
     status: revision
     spec_type: Type
     use_cases_url: https://docs.google.com/document/d/1VxuYEcmjdFba4j9Klmuw0JFY_uCCYYTVsLfC5IbUneE/edit?usp=sharing
