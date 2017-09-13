@@ -18,7 +18,7 @@ specifications:
     g_mapping_file: PhysicalEntity Mapping
     status: revision
     spec_type: Type
-    use_cases_url:
+    use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1q4A8KvhdsMcTYkwQdCptGc1fbiqe4yqJB5xMt9fWRso/edit?usp=sharing
     version: 0.0.1
   - name : LaboratoryProtocol
     g_folder: LabProtocol
