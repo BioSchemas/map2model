@@ -3,7 +3,7 @@
 **map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
 
 ![map2model workflow](../master/docs/img/map2model_workflow.jpg)
-> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in img folder with the name **map2model_workflow.jpg**.
+> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in the *doc > img* folder with the name **map2model_workflow.jpg**.
 
 **map2model** retrieves properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularies) from Bioschemas mapping **GDrive** files, then classifies properties into two groups:
 1. **Extended properties:** Properties that are part of the extended schema.org Type. 
@@ -13,9 +13,10 @@ After classifing the properties, **map2model** generates a Markdown file that ca
 
 Comments on each specifications should be done through github enabling tracking and execution of corrections.
 
-## Run map2model in your computer
+## Run map2model on your computer
 
 ### Requirements
+
 Before starting, please ensure:
 1. You have Git installed [https://git-scm.com/downloads](https://git-scm.com/downloads)
 1. You have Python 3 installed [https://www.python.org/downloads/](https://www.python.org/downloads/)
@@ -47,7 +48,40 @@ Before starting, please ensure:
 1. Open the Terminal or Console application of your Operating System and go to the folder where you cloned the **bioschemas-map2model** repository.
 1. Install Python dependencies using the command ```pip3 install -r requirements.txt```.
 1. Run the map2model module executing the command ```python3 run.py```.
-1. Once the ```python3 run.py``` command finish, clone the **Bioschemas Specifications** repository using the command ```git clone ...``` 
+1. Once complete, the new markdown files can be found in the *bioschemas-map2model > docs > specification_md_files* folder. There should be one markdown file (with a .md extension) for each specification.
+
+***
+
+## Adding new specifications
+
+If you have created a new specification (or a specification is missing from the *bioschemas-map2model > docs > specification_md_files* folder) you will need to extend the *bioschemas-map2model > spec2model > configuration.yml* file.
+
+If you are unfamilar with yaml, please read [http://yaml.org/](http://yaml.org/).
+
+1. Open the *bioschemas-map2model > spec2model > configuration.yml* file.
+1. Add the following template to the bottom of the file:
+```
+  - name : 
+    g_folder: 
+    g_mapping_file: 
+    status: revision
+    spec_type: Profile
+    use_cases_url:
+    version: 0.0.1
+```
+      - Please be careful with spacing, as it is important in YAML!
+1. Apart from *use_case_url* all fields should have a value:
+      - *name* is the name of the specification
+      - *g_folder* is the name of the gDocs folder in which you specification exists. E.g., a *Tool* specification will be found in the **Tool** folder (i.e., gDrive > BioSchemas.org > Specifications > Tool*). 
+      - *g_mapping_file* : in the *g_folder* you should have a mapping file based on the [original template](https://docs.google.com/spreadsheets/d/1OMBiB8SXiRe1b3Cl91IuNlHbJ9_UXHg8B-GY0MYRSaY/edit?usp=sharing). Write the name of the mapping file here, e.g., **Tool Mapping**.
+      - *use_cases_url* : in the *g_folder* you may have a use case document. If it exists, paste a link to it here.
+1. Re-run ```python3 run.py```. Your new markdown files should be in the *bioschemas-map2model > docs > specification_md_files* folder. 
+
+***
+
+
+
+1. Once the ```python3 run.py``` command finishes, clone the **Bioschemas Specifications** repository using the command ```git clone ...``` 
 1. Go to ```docs\specification_md_files\``` of your cloned spec2model repository, copy all the **.md files and paste them in your copy of **Bioschemas Specifications** repository.
 1. Make a pull request of the **Bioschemas Specifications** repository.
       > Updates will be loaded to [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) when the pull request is merged to the master branch.
