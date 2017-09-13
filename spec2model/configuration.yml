@@ -4,56 +4,56 @@ specifications:
     g_mapping_file: Tool Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url:
     version: 0.0.1
   - name : Beacon
     g_folder: Beacon
     g_mapping_file: Beacon Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url:
     version: 0.0.1
   - name : PhysicalEntity
     g_folder: PhysicalEntity
     g_mapping_file: PhysicalEntity Mapping
     status: revision
     spec_type: Type
-    use_cases_url: https://docs.google.com/document/d/1VxuYEcmjdFba4j9Klmuw0JFY_uCCYYTVsLfC5IbUneE/edit?usp=sharing
+    use_cases_url:
     version: 0.0.1
   - name : LaboratoryProtocol
     g_folder: LabProtocol
     g_mapping_file: LabProtocol Mapping
     status: revision
     spec_type: Type
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url: https://docs.google.com/a/ebi.ac.uk/document/d/1EZ_U2u2aJH_ERsoecaJRAJkWVHYGU2SK8HYSjvhEaMM/edit?usp=sharing
     version: 0.0.1
   - name : Protein
     g_folder: Protein
     g_mapping_file: Protein Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
     version: 0.0.1
   - name : ProteinStructure
     g_folder: ProteinStructure
     g_mapping_file: ProteinStructure Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url: https://drive.google.com/drive/folders/0B0fE3oOZIq44U1gzLWgtV0VBaTQ
     version: 0.0.1
   - name : ProteinAnnotation
     g_folder: ProteinAnnotation
     g_mapping_file: ProteinAnnotation Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
     version: 0.0.1
   - name : DataRepository
     g_folder: DataRepository
     g_mapping_file: DataRepository Mapping
     status: revision
     spec_type: Profile
-    use_cases_url: https://drive.google.com/open?id=0BwpCuN9mloG8WTl6X3hkeFIwems
+    use_cases_url: https://docs.google.com/spreadsheets/d/1XzrZxFIuG3TS9RU8vACoUjAvaADLmI_FrIk7O3BEkxY/edit#gid=1439268036
     version: 0.0.1
   - name : Event
     g_folder: Event
