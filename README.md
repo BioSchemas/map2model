@@ -1,8 +1,18 @@
 # Bioschemas.org map2model
 
-map2model is a Python module developed to facilitate [Bioschemas Groups](http://bioschemas.org/groups/) in the specification proposal process.
+**map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
 
-## Run the module in your computer
+![Bioschemas Specification Process](../master/docs/img/specification_process.jpg)
+      > If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder wiht the name **specification_process.jpg**.
+
+**map2model** retreives properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularries) from Bioschemas mapping **GDrive** files, classify properties in two groups:
+      1. **Extended Properties:** Properties that are part of the extended schema.org Type. 
+      2. **New Properties:** Properties that are new to schema.org vocabulary or are completely new to the schema.org
+After Classifing the properties, it generates a Markdown file that can be interpreted by Bioschemas.org Jekyll implementation and are easy to visualize by end users.
+
+Comments to each specifications should be done by github to keep track of them and execute the corrections to each specification.
+
+## Run map2model in your computer
 1. Clone the **bioschemas-map2model** repository: ```git clone https://github.com/BioSchemas/bioschemas-map2model.git```
 1. Add the [Bioschemas GDrive Folder](https://drive.google.com/open?id=0B8yXU9SkT3ftaWJtTGYyTTJjck0) to your Google Account Drive.
       > In your Gooogle Drive Account go to **Shared with me**, right click the **Bioschemas.org** folder and select **Add to my Drive**)
