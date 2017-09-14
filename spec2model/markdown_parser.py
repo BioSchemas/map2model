@@ -9,6 +9,7 @@ class FrontMatterParser:
     md_files_path = ''
     bsc_parser = ''
     bsc_spec_list = ''
+    creds_file_path='spec2model/mycreds.txt'
 
     def __init__(self):
         self.md_files_path='docs/specifications_md_files/'
@@ -31,6 +32,18 @@ class FrontMatterParser:
         spec_post.metadata=spec_metadata
         return spec_post
 
+    def __create_spec_folder_struct(self, spec_name):
+        spec_dir = self.md_files_path + spec_name + '/'
+        if not os.path.exists(spec_dir):
+            os.makedirs(spec_dir)
+
+        spec_exp_dir = spec_dir + 'examples/'
+
+        if not os.path.exists(spec_exp_dir):
+            os.makedirs(spec_exp_dir)
+
+        print("%s file structure created." % spec_name)
+
     def parse_front_matter(self):
 
         self.bsc_spec_list = self.bsc_file_manager.get_specification_list()
@@ -41,13 +54,15 @@ class FrontMatterParser:
             temp_spec_post.metadata['layout']= 'new_spec_detail'
             md_fm_bytes = BytesIO()
             frontmatter.dump(temp_spec_post, md_fm_bytes)
-            with open(self.md_files_path+temp_spec_post.metadata['name']+'.md', 'w') as outfile:
+            spec_name=temp_spec_post.metadata['name']
+            self.__create_spec_folder_struct(spec_name)
+            spec_md_file_path=self.md_files_path + spec_name + '/' + spec_name + '.md'
+            with open(spec_md_file_path, 'w') as outfile:
                 temp_str=str(md_fm_bytes.getvalue(),'utf-8')
                 outfile.write(temp_str)
                 outfile.close()
             print ('%s MarkDown file generated.' % temp_spec_post.metadata['name'])
-
-        os.remove('creds_path="spec2model/mycreds.txt"')
+        os.remove(self.creds_file_path)
         print('Goggle Drive connection closed and credit file deleted.')
         print ('All Jekyll formatted MarkDown files generated.')
 
