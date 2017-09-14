@@ -1,6 +1,7 @@
 import spec2model.file_manager as f_manager
 import spec2model.mapping as mapper
 import frontmatter
+import os
 from io import BytesIO
 
 
@@ -46,4 +47,8 @@ class FrontMatterParser:
                 outfile.close()
             print ('%s MarkDown file generated.' % temp_spec_post.metadata['name'])
 
+        os.remove('creds_path="spec2model/mycreds.txt"')
+        print('Goggle Drive connection closed and credit file deleted.')
         print ('All Jekyll formatted MarkDown files generated.')
+
+
