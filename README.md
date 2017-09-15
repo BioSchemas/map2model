@@ -79,9 +79,25 @@ If you are unfamilar with yaml, please read [http://yaml.org/](http://yaml.org/)
 
 ***
 
+## Updating GitHub Repositories (This section will be updated with a Python automation code)
+    
+    > It is important to clarify that [Specifications repository](https://github.com/BioSchemas/Specifications) is a submodule of  [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) and also of [map2model repository](https://github.com/BioSchemas/map2model).
+    > For **map2model repository** the folder [docs/specifications_md_files](https://github.com/BioSchemas/Specifications/tree/09d2ec61a31bb6556d994efbc43db68a99ac9651) points to a copy of the Specifications repository.
+    > For **bioschmas.github.io repository** the folder [_bsc_specs](https://github.com/BioSchemas/Specifications/tree/bf6bf7f991e552e2dee856b0a50248a3d3170093) points to a copy of the Specifications repository.
+    > Both copies of Specifications repository (docs/specifications_md_files, _bsc_specs ) are independent and mus be commited separately.
+    > The following steps guide throw handling this process, but a Python code will be added to the map2model module to  automate this functionality.
+    > If you are unfamiliar with git submodules you can read this documentation [git Tools - submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), [GitHub - Working with submodules](https://github.com/blog/2104-working-with-submodules) 
 
-
-1. Once the ```python3 run.py``` command finishes, clone the **Bioschemas Specifications** repository using the command ```git clone ...``` 
-1. Go to ```docs\specification_md_files\``` of your cloned spec2model repository, copy all the **.md files and paste them in your copy of **Bioschemas Specifications** repository.
-1. Make a pull request of the **Bioschemas Specifications** repository.
-      > Updates will be loaded to [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) when the pull request is merged to the master branch.
+1. Once the ```python3 run.py``` command finishes, open a terminal or command line in your machine and go to the folder where you stored the **map2model** copy.
+1. Go to your local copy of ```docs/specifications_md_files``` e.g.: ```cd docs/specifications_md_files```
+1. Checkout your update branch executing ```git checkout update```
+1. Update the changes done by map2model module executing```git pull```
+1. Commit your updates with ```git commit -am "Your commit message."```  
+1. Push the changes of your update branch ```git push ```
+1. Go back to map2model root e.g. ```cd ../..```
+1. Change to update branch of map2model ```git checkout update```
+1. Update submodule reference  ```git submodule update --remote --merge ```
+1. Make a commit to the map2model ```git commit -a -m "Specifications submodule updated"```
+1. Push the changes of your update branch ```git push```
+1. Access to GitHub and make a pull request for the submodule and another for the map2model repository.
+   > Updates will be loaded to [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) when the pull request is merged to the master branch.
