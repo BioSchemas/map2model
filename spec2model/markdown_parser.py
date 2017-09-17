@@ -41,8 +41,31 @@ class FrontMatterParser:
 
         if not os.path.exists(spec_exp_dir):
             os.makedirs(spec_exp_dir)
-
+            example_file = open(spec_exp_dir+"README.md","w")
+            example_file.write("## %s Examples. \n")
+            example_file.write("Folder that stores JSON-LD, RDFa or microdata examples.\n")
+            example_file.write(">Examples will be added in a future map2model release.\n")
+            example_file.close()
         print("%s file structure created." % spec_name)
+
+    def __write_README(self, spec_md_file_path, formatted_spec):
+        readme_file = open(spec_md_file_path+"/README.md","w")
+        readme_file.write("## %s specification v. %s \n\n" % (formatted_spec['name'], formatted_spec['version']))
+        readme_file.write("**"+formatted_spec['spec_type']+"** \n\n")
+        for step_hier in formatted_spec['hierarchy']:
+            if formatted_spec['spec_type'] == "Type":
+                readme_file.write("%s > " % formatted_spec['name'])
+            readme_file.write(step_hier)
+            if step_hier!="Thing": readme_file.write(" > ")
+        readme_file.write("\n\n**%s** \n" % formatted_spec['subtitle'].strip())
+        readme_file.write("\n# Description \n")
+        readme_file.write("%s \n" % formatted_spec['description'])
+        readme_file.write("# Links \n")
+        readme_file.write("- [Specification](specification.html)\n")
+        readme_file.write("- [Mapping Spreadsheet](%s)\n" % formatted_spec['spec_mapping_url'])
+        readme_file.write("- [GitHUb Issues](%s)\n" % formatted_spec['gh_tasks'])
+        readme_file.write("> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.")
+        readme_file.close()
 
     def parse_front_matter(self):
 
@@ -56,8 +79,9 @@ class FrontMatterParser:
             frontmatter.dump(temp_spec_post, md_fm_bytes)
             spec_name=temp_spec_post.metadata['name']
             self.__create_spec_folder_struct(spec_name)
-            spec_md_file_path=self.md_files_path + spec_name + '/' + spec_name + '.md'
-            with open(spec_md_file_path, 'w') as outfile:
+            spec_md_file_path=self.md_files_path + spec_name
+            self.__write_README(spec_md_file_path, formatted_spec)
+            with open(spec_md_file_path+ '/specification.html', 'w') as outfile:
                 temp_str=str(md_fm_bytes.getvalue(),'utf-8')
                 outfile.write(temp_str)
                 outfile.close()

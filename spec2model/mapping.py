@@ -1,6 +1,6 @@
+import requests
 import gspread
 from pydrive.auth import GoogleAuth
-from oauth2client.service_account import ServiceAccountCredentials
 from rdflib import ConjunctiveGraph
 
 
@@ -214,6 +214,14 @@ class GSheetsParser:
     def set_spec_metadata(self, spec_metadata):
         self.spec_metadata=spec_metadata
 
+    def check_url(self, spec_url):
+        if spec_url==None: return "err_404"
+        r=requests.get(spec_url)
+        if r==404:
+            return "err_404"
+        else:
+            return spec_url
+
     def __get_mapping_description(self, mapping_sheet):
         mapping_description = {}
         mapping_description['name']=self.spec_metadata['name']
@@ -222,11 +230,11 @@ class GSheetsParser:
         mapping_description['spec_mapping_url']=self.spec_metadata['spec_mapping_url']
         mapping_description['status']=self.spec_metadata['status']
         mapping_description['spec_type']=self.spec_metadata['spec_type']
-        mapping_description['gh_folder']='https://github.com/BioSchemas/Specifications/tree/master/'+self.spec_metadata['name']
-        mapping_description['gh_examples']=mapping_description['gh_folder']+'/Examples/'
+        mapping_description['gh_folder']='https://github.com/BioSchemas/specifications/tree/master/'+self.spec_metadata['name']
+        mapping_description['gh_examples']='https://github.com/BioSchemas/specifications/tree/master/'+self.spec_metadata['name']+'/examples'
         mapping_description['gh_tasks']='https://github.com/BioSchemas/bioschemas/labels/type%3A%20'+self.spec_metadata['name']
-        mapping_description['edit_url']='https://github.com/BioSchemas/bioschemas.github.io/edit/master/_newSpecs/'+self.spec_metadata['name']+'.md'
-        mapping_description['use_cases_url']=self.spec_metadata['use_cases_url']
+        mapping_description['edit_url']='https://github.com/BioSchemas/specifications/tree/master/'+self.spec_metadata['name']+'/specification.html'
+        mapping_description['use_cases_url']=self.check_url(self.spec_metadata['use_cases_url'])
         mapping_description['version']=self.spec_metadata['version']
         mapping_description['subtitle'] = mapping_sheet.acell('B1').value
         mapping_description['description'] = mapping_sheet.acell('B2').value
@@ -235,11 +243,8 @@ class GSheetsParser:
 
     def get_mapping_g_sheets(self):
 
-        #creds = ServiceAccountCredentials.from_json_keyfile_name(self.cred_file, self.scope)
-
         client = gspread.authorize(self.gauth.credentials)
 
-        #client = gspread.authorize(creds)
         print("Parsing %s file." % self.spec_metadata['g_mapping_file'])
         mapping_sheet = client.open_by_key(self.gsheet_id).get_worksheet(0)
 
