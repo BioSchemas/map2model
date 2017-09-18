@@ -12,7 +12,7 @@ class FrontMatterParser:
     creds_file_path='spec2model/mycreds.txt'
 
     def __init__(self):
-        self.md_files_path='docs/specifications_md_files/'
+        self.md_files_path='docs/spec_files/'
         self.bsc_file_manager = f_manager.FolderDigger()
         self.bsc_parser = mapper.GSheetsParser()
 
