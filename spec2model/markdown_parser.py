@@ -42,7 +42,7 @@ class FrontMatterParser:
         if not os.path.exists(spec_exp_dir):
             os.makedirs(spec_exp_dir)
             example_file = open(spec_exp_dir+"README.md","w")
-            example_file.write("## %s Examples. \n")
+            example_file.write("## %s coding examples. \n" % spec_name)
             example_file.write("Folder that stores JSON-LD, RDFa or microdata examples.\n")
             example_file.write(">Examples will be added in a future map2model release.\n")
             example_file.close()
@@ -51,20 +51,25 @@ class FrontMatterParser:
     def __write_README(self, spec_md_file_path, formatted_spec):
         readme_file = open(spec_md_file_path+"/README.md","w")
         readme_file.write("## %s specification v. %s \n\n" % (formatted_spec['name'], formatted_spec['version']))
+
         readme_file.write("**"+formatted_spec['spec_type']+"** \n\n")
-        for step_hier in formatted_spec['hierarchy']:
-            if formatted_spec['spec_type'] == "Type":
-                readme_file.write("%s > " % formatted_spec['name'])
+
+        for i_pos, step_hier in enumerate(reversed(formatted_spec['hierarchy'])):
             readme_file.write(step_hier)
-            if step_hier!="Thing": readme_file.write(" > ")
+            if i_pos < len(formatted_spec['hierarchy'])-1:
+                readme_file.write(" > ")
+        if formatted_spec['spec_type'] == "Type":
+            readme_file.write(" > %s" % formatted_spec['name'])
         readme_file.write("\n\n**%s** \n" % formatted_spec['subtitle'].strip())
         readme_file.write("\n# Description \n")
         readme_file.write("%s \n" % formatted_spec['description'])
         readme_file.write("# Links \n")
-        readme_file.write("- [Specification](specification.html)\n")
+        readme_file.write("- [Specification](http://bioschemas.org/bsc_specs/%s/specification/)\n" % formatted_spec['name'])
+        readme_file.write("- [Specification source](specification.html)\n")
         readme_file.write("- [Mapping Spreadsheet](%s)\n" % formatted_spec['spec_mapping_url'])
+        readme_file.write("- [Coding Examples](%s)\n" % formatted_spec['gh_examples'])
         readme_file.write("- [GitHUb Issues](%s)\n" % formatted_spec['gh_tasks'])
-        readme_file.write("> These files were generated using [ma2model](https://github.com/BioSchemas/map2model) Python Module.")
+        readme_file.write("> These files were generated using [map2model](https://github.com/BioSchemas/map2model) Python Module.")
         readme_file.close()
 
     def parse_front_matter(self):
