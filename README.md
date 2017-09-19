@@ -32,7 +32,7 @@ Before starting, please ensure you have the following installed:
 1. Install Python dependencies using the command ```pip3 install -r requirements.txt```.
 1. Run the map2model module by executing the command ```python3 run.py```.
 1. After executing the ```run.py``` command a web browser will ask for a Google Account authentication. **Log in using the account you used for step 2.** 
-1. Once complete, the new markdown files can be found in the *map2model > docs > specification_md_files* folder. There should be one markdown file (with a .md extension) for each specification.
+1. Once complete, the new markdown files can be found in the *map2model > docs > spec_files* folder. There should be one markdown file (with a .md extension) for each specification.
 
 ***
 
