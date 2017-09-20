@@ -47,7 +47,7 @@ Before starting, please ensure you have the following installed:
 1. Check your changes at [Specifications Bioschemas Web section](htt://bioschemas.org/bsc_specs)
 
 ****
-## Advanced user documentation
+## Advance user's documentation
 
 ###Adding new specifications
 
