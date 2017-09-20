@@ -46,8 +46,8 @@ Before starting, please ensure you have the following installed:
       > To preserve [Bioschemas Web Page](http://bioschemas.org), changes to [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) will be issued by Bioschemas Web Master.
 1. Check your changes at [Specifications Bioschemas Web section](htt://bioschemas.org/bsc_specs)
 
-**********+
-## Advanced users documentation
+****
+## Advanced user documentation
 
 ###Adding new specifications
 
@@ -77,8 +77,6 @@ specifications:
       - *g_mapping_file* : in the *g_folder* you should have a mapping file based on the [original template](https://docs.google.com/spreadsheets/d/1OMBiB8SXiRe1b3Cl91IuNlHbJ9_UXHg8B-GY0MYRSaY/edit?usp=sharing). Write the name of the mapping file here, e.g., **Tool Mapping**.
       - *use_cases_url* : in the *g_folder* you may have a use case document. If it exists, paste a link to it here.
 1. Re-run ```python3 run.py```. Your new markdown files should be in the *bioschemas-map2model > docs > specification_md_files* folder. 
-
-***
 
 ### Create your own client_secrets.json
 
