@@ -10,76 +10,72 @@ In the following README you have the process needed to create a Bioschemas Speci
 1. Use Case Study
 1. Mapping
 1. Specification
-1. Markdown
-1. RDFa
 
 > For this expalantion, the **Bioscheas Tool Specification** will be used as the specification sample.
 
-## 1. USE CASE STUDY
+## USE CASE STUDY
 > Section under construction.
 
-## 2. MAPPING
+## MAPPING
 
 After Defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure.
 
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
-      > Folder for Bioschemas Tool Specification
-      ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
+**Folder for Bioschemas Tool Specification**
+![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
 
-2. Open the Mapping template and you will find the following structure.
+1. Open the Mapping template and you will find the following structure.
 
-    ![Bioschemas Tools Mapping empty file](../master/docs/img/mapping_empty_file.png)
-
+![Bioschemas Tools Mapping empty file](../master/docs/img/mapping_empty_file.png)
   + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
-    1. **Property:** Name of the property from the selected schema.org type.
-    1. **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
-    1. **Description:**: Description of the property from the schema.org vocabulary for the selected type.
-  + **bioschemas:** These columns are defined for the properties that will be in the Bioschemas Specification file.
-    1. **BSC Description:** If is considered an additional description for the property, here can be aded an additional text that complements the schema.org description.
-    1. **Marginality:** The template gives three options for the property specification of the new Bioschemas Type, Minimum, Recomended or Optional. 
-    1. **Cardinalitry:**	The template gives you the two possible cardinalyties in a Bioschemas Specification (ONE or Many).
-    1. **Controlled Vocabulary:** 
+   - **Property:** Name of the property from the selected schema.org type.
+   - **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
+   - **Description:**: Description of the property from the schema.org vocabulary for the selected type.
+      + **bioschemas:** These columns are defined for the properties that will be in the Bioschemas Specification file.
+   - **BSC Description:** If is considered an additional description for the property, here can be aded an additional text that complements the schema.org description.
+   - **Marginality:** The template gives three options for the property specification of the new Bioschemas Type, Minimum, Recomended or Optional. 
+   - **Cardinalitry:**	The template gives you the two possible cardinalyties in a Bioschemas Specification (ONE or Many).
+   - **Controlled Vocabulary:** 
       + This field contains a list of terms or ontologies, terms are words, that are separated by a coma, and an onlology is composed by a name_space:url.
-      > This are three possible accepted values:
-      > 1. red, green, blue, pallete3:htt://ontlology.pallete3.org
-      > 1. pallete1:htt://ontlology.pallete1.org, pallete2:htt://ontlology.pallete2.org, pallete3:htt://ontlology.pallete3.org
-      > 1. red, green, blue, white
-   
-  + **USE CASE**
-    - **USE CASE NAME**
-    - **USE CASE URL**
-    - **CONTRIBUTOR1, CONTRIBUTOR2,...**: List of Contributors that worked in the description of this Use Case.
-      1. **Name:** Name for the Use Case (This field is only needed to double check or compare the diferent names that this property has across the diffente Use Cases, and with this define the BioSchema property name).
-      1. **Content Example:** Example of the Use Case.
-      1. **UseCase:** Three possible options for the Specifications Mapping 
+      **This are three possible accepted values (Mapping Spreadsheet template handles automaticaly this colors):**
+            - red, green, blue, pallete3:htt://ontlology.pallete3.org
+            - pallete1:http://ontlology.pallete1.org, pallete2:http://ontlology.pallete2.org, pallete3:http://ontlology.pallete3.org
+            - red, green, blue, white
+   - **USE CASE GENERAL INFORMATION**
+      + **USE CASE NAME**
+      + **USE CASE URL**
+      + **CONTRIBUTOR1, CONTRIBUTOR2,...**: List of Contributors that worked in the description of this Use Case.
+   - **USE CASE SPECIFIC INFORMATION** 
+      + **Name:** Name for the Use Case (This field is only needed to double check or compare the diferent names that this property has across the diffente Use Cases, and with this define the BioSchema property name).
+      + **Content Example:** Example of the Use Case.
+      + **UseCase:** Three possible options for the Specifications Mapping 
           - **Match:** If the use case matches with a Schema.org property.
           - **No Match:** If the property doesn't match with the Schema.org Property.
           - **Partial Match**: If the Use Case Property doesn't match perfectly but is a close connection with the Schema.org property.
-          
-> Now that all the columns of the spread sheet are explained, lets follow the next step usisng the Bioschemas Tools Specification Example.
+          > Now that all the columns of the spread sheet are explained, lets follow the next step usisng the Bioschemas Tools Specification Example.
 
-3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure
+1. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure.
+For the Tools Specificationin the Use Case Study was identified that the Schema.or Type [SoftwareApplication](http://schema.org/SoftwareApplication) is the one that fits the most with all the Use Cases.
 
-      > For the Tools Specificationin the Use Case Study was identified that the Schema.or Type [SoftwareApplication](http://schema.org/SoftwareApplication) is the one that fits the most with all the Use Cases.
-      ![Schema.org Type Definition](../master/docs/img/schema_org_type.png)
+![Schema.org Type Definition](../master/docs/img/schema_org_type.png)
 
-4. Copy the Type definition table, starting from the firts Property, don't copy the table headers.
+1. Copy the Type definition table, starting from the firts Property, don't copy the table headers.
+For the SoftwareApplication example it should look like this.
 
-    > For the SoftwareApplication example it should look like this.
-    ![Copy Schema.org Type Definition](../master/docs/img/schema_org_type_copy.png)
+![Copy Schema.org Type Definition](../master/docs/img/schema_org_type_copy.png)
 
-5. Then paste into your mapping Spreadsheet starting in **A6 Cell**.
+1. Then paste into your mapping Spreadsheet starting in **A6 Cell**.
+For the Tools Specification you would have something like this.
 
-    >  For the Tools Specification you would have something like this.
-    ![Pasting Schema.org Type Definition to the mapping Template](../master/docs/img/schema_org_paste_template.png)
+![Pasting Schema.org Type Definition to the mapping Template](../master/docs/img/schema_org_paste_template.png)
 
 
-6. Fill all the Use Cases for this Specification
+1. Fill all the Use Cases for this Specification
+For the Tools Specification you would have something like this. The template gives you diferent colors for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light ornge for No Match).
 
-    >  For the Tools Specification you would have something like this. The template gives you diferent colors for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light ornge for No Match).
-    ![Filling the Use Cases in the Mapping Template](../master/docs/img/fill_mapping_template_UC.png)
+![Filling the Use Cases in the Mapping Template](../master/docs/img/fill_mapping_template_UC.png)
 
-7. Fill the Bioschemas Fields
+1. Fill the Bioschemas Fields
   + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
     1. **Property:** Name of the property from the selected schema.org type.
     1. **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
@@ -100,15 +96,15 @@ After Defining the properties, the Schema.org type and you will need to follow t
             ```onto1: http://onto1.com, onto2: http: //onto2.com, onto3: http://onto1.com```
 
       - **Mixed list**
-            ```onto1:http://onto1.com, term1, onto2:http: //onto2.com, term2, term3, onto3:http://onto1.com```
+            ```onto1:http://onto1.com, term1, onto2:http: //onto2.com, term2, term3, onto3:http://onto1.com``` 
+            For the Tools Specification you would have something like this.
+               ![Fill the Bioschemas Fields](../master/docs/img/bioschemas_mapping.png)
 
-    >  For the Tools Specification you would have something like this.
-    ![Fill the Bioschemas Fields](../master/docs/img/bioschemas_mapping.png)
+1. Go to the Bioschemas fields Sheet to view the summary of your mapping
+For the Tools Specification you would have something like this.
 
-8. Go to the Bioschemas fields Sheet to view the summary of your mapping
-      > For the Tools Specification you would have something like this.
-      ![Mapping Summary](../master/docs/img/mapping_summary.png)
-      > If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
+![Mapping Summary](../master/docs/img/mapping_summary.png)
+> If you have fields without name is because you will add to the Schema.org you selected as basis, and you need to add the name in the specification Doc File.
 
 ## 3. SPECIFICATION
 Specifications are generated following the **Use Cases** > **Mapping** > **map2model** process.
