@@ -2,16 +2,16 @@
 
 **map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
 
-![map2model workflow](../master/docs/img/map2model_workflow.jpg)
-> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in the *doc > img* folder with the name **map2model_workflow.jpg**.
-
-**map2model** retrieves properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularies) from Bioschemas mapping files (in GDrive), then classifies properties into two groups:
+**map2model** retrieves properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularies) from Bioschemas mapping files (in [GDrive](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg?usp=sharing)), then classifies properties into two groups:
 1. **Extended properties:** Properties that are part of the extended schema.org Type. 
 1. **New properties:** Properties that are new to the schema.org vocabulary or are completely new to schema.org.
       
-After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's Jekyll implementation thereby updating the Bioschemas.org web pages.
+After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site [Jekyll implementation](https://jekyllrb.com/) thereby updating the Bioschemas.org web pages.
 
-Comments on each specifications should be done through github enabling tracking and execution of corrections.
+Comments on each specifications should be done through [bioschemas repository](https://github.com/BioSchemas/bioschemas) GitHub issues to track, comment and execute of corrections.
+
+![map2model workflow](../master/docs/img/map2model_workflow.jpg)
+> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in the *doc > img* folder with the name **map2model_workflow.jpg**.
 
 ## Run map2model on your computer
 
