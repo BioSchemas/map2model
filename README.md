@@ -6,7 +6,7 @@
 1. **Extended properties:** Properties that are part of the extended schema.org Type. 
 1. **New properties:** Properties that are new to the schema.org vocabulary or are completely new to schema.org.
       
-After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site [Jekyll implementation](https://jekyllrb.com/) thereby updating the Bioschemas.org web pages.
+After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site -[Jekyll implementation](https://jekyllrb.com/)- thereby updating the Bioschemas.org web pages.
 
 Comments on each specifications should be done through [bioschemas repository](https://github.com/BioSchemas/bioschemas) GitHub issues to track, comment and execute of corrections.
 
