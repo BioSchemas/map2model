@@ -51,7 +51,8 @@ To record the decisions your team has reached follow these steps:
       - **Partial Match**: If the Use Case Property doesn't match perfectly but is a close connection with the Schema.org property.
       
       
-_Now that all the columns of the spread sheet are explained, lets follow the next step usisng the Bioschemas Tools Specification Example._
+### Example walkthrough
+To illustrate this process we describe the steps using the Bioschemas Tools Specification.
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure.
 In their Use Case Study, the Tools Specification identified that the Schema.org Type [SoftwareApplication](http://schema.org/SoftwareApplication) was the best fit for their use cases.
