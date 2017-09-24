@@ -8,7 +8,7 @@
       
 After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site thereby updating the Bioschemas.org web pages.
 
-Comments on each specifications should be done through the [bioschemas repository](https://github.com/BioSchemas/bioschemas) *GitHub issues* to track, comment on and execute corrections.
+Comments on each specification should be done through the [bioschemas repository](https://github.com/BioSchemas/bioschemas) *GitHub issues* to track, comment on and execute corrections.
 
 ![map2model workflow](../master/docs/img/map2model_workflow.jpg)
 > If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in the *doc > img* folder with the name **map2model_workflow.jpg**.
