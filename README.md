@@ -29,7 +29,7 @@ Before starting, please ensure you have the following installed:
 1. Add the [Bioschemas GDrive Folder](https://drive.google.com/open?id=0B8yXU9SkT3ftaWJtTGYyTTJjck0) to your Google Account Drive.
       > In your Gooogle Drive Account go to **Shared with me**, right click the **Bioschemas.org** folder and select **Add to my Drive**)
 1. Open the Terminal or Console application of your Operating System and go to the folder where you cloned the **map2model** repository.
-1. Modify ```configuration.yml```in your forked repository (configuration.yml file tells map2model which **Types/Profiles** mapping spreadsheets parse to a specification. ***If you need further explanation to modify .yml file, please refer to Adding new specifications of this readme.*
+1. Modify ```configuration.yml```in your cloned repository (configuration.yml file tells map2model which **Types/Profiles** mapping spreadsheets parse to a specification. ***If you need further explanation to modify .yml file, please refer to Adding new specifications of this readme.*
 1. Install Python dependencies using the command ```pip3 install -r requirements.txt```.
 1. Run the map2model module by executing the command ```python3 run.py```.
 1. After executing the ```run.py``` command a web browser will ask for a Google Account authentication. **Log in using the account you used for step 2.** 
