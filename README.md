@@ -6,9 +6,9 @@
 1. **Extended properties:** Properties that are part of the extended schema.org Type. 
 1. **New properties:** Properties that are new to the schema.org vocabulary or are completely new to schema.org.
       
-After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site -[Jekyll implementation](https://jekyllrb.com/)- thereby updating the Bioschemas.org web pages.
+After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site thereby updating the Bioschemas.org web pages.
 
-Comments on each specifications should be done through [bioschemas repository](https://github.com/BioSchemas/bioschemas) GitHub issues to track, comment and execute of corrections.
+Comments on each specifications should be done through the [bioschemas repository](https://github.com/BioSchemas/bioschemas) *GitHub issues* to track, comment on and execute corrections.
 
 ![map2model workflow](../master/docs/img/map2model_workflow.jpg)
 > If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0TY3NpZ3ZxRnAySkk/view?usp=sharing) and store the result in the *doc > img* folder with the name **map2model_workflow.jpg**.
@@ -47,7 +47,7 @@ Before starting, please ensure you have the following installed:
 1. Check your changes at [Specifications Bioschemas Web section](htt://bioschemas.org/bsc_specs)
 
 ****
-## Advance user's documentation
+## Advanced user's documentation
 
 ### Add new specifications
 
