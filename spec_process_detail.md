@@ -17,7 +17,7 @@ In the following README you have an explanation of the process needed to create 
 
 ## MAPPING
 
-Once you have defined Use Cases you should start to consider what properties are needed to describe the data from your use case. Please try to reuse existing Schema.org properties (and definitions) where possible. It may be benficial to try and extend (or specialise) an existing Schema.org Type.  You may find reading other Bioschemas.org specifications and useful.
+Once you have defined Use Cases you should start to consider what properties are needed to describe the data from your use case. Please try to reuse existing Schema.org properties (and definitions) where possible. It may be benficial to try and extend (or specialise) an existing Schema.org Type.  You may find reading other Bioschemas.org specifications useful.
 
 To record the decisions your team has reached follow these steps:
 
