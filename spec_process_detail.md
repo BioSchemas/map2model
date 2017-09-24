@@ -26,20 +26,21 @@ To record the decisions your team has reached follow these steps:
 1. Open the Mapping template and you will find the following structure.
 
 ![Bioschemas Tools Mapping empty file](../master/docs/img/mapping_empty_file.png)
-  + **schema.org**: These columns are copy -pasted from the schema.org type definition page.
+  + **schema.org**: These columns are copy-pasted from a schema.org type definition page.
     - **Property:** Name of the property from the selected schema.org type.
-    - **Expected Type:** Expectedd type for the property suggested by schema.org selected type.
+    - **Expected Type:** Expected type for the property suggested by schema.org selected type.
     - **Description:**: Description of the property from the schema.org vocabulary for the selected type.
   + **bioschemas:** These columns are defined for the properties that will be in the Bioschemas Specification file.
     - **BSC Description:** If is considered an additional description for the property, here can be aded an additional text that complements the schema.org description.
-    - **Marginality:** The template gives three options for the property specification of the new Bioschemas Type, Minimum, Recomended or Optional. 
-    - **Cardinalitry:**	The template gives you the two possible cardinalyties in a Bioschemas Specification (ONE or Many).
+    - **Marginality:** The template gives three options for the property specification of the new Bioschemas Type: Mandatory, Recommended or Optional. 
+    - **Cardinalitry:**	The template gives you the two possible cardinalities in a Bioschemas Specification (ONE or Many).
     - **Controlled Vocabulary:** 
-      This field contains a list of terms or ontologies, terms are words, that are separated by a coma, and an onlology is composed by a name_space:url.
-      **This are three possible accepted values (Mapping Spreadsheet template handles automaticaly this colors):**
+      This field contains a list of terms or ontologies, terms are words, that are separated by a comma, and an onlology is composed by a name_space:url.                  
+      **This are three possible accepted values (Mapping Spreadsheet template handles automaticaly this colours):**
         1. red, green, blue, pallete3:htt://ontlology.pallete3.org
         1. pallete1:http://ontlology.pallete1.org, pallete2:http://ontlology.pallete2.org, pallete3:http://ontlology.pallete3.org
         1. red, green, blue, white
+      > I have no idea what this is about?  
   - **USE CASE GENERAL INFORMATION**
     + **USE CASE NAME**
     + **USE CASE URL**
