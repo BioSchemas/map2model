@@ -65,10 +65,11 @@ For the Tools Specification you would have something like this:
 ![Pasting Schema.org Type Definition to the mapping Template](../master/docs/img/schema_org_paste_template.png)
 
 
-6. Fill all the Use Cases for this Specification
-For the Tools Specification you would have something like this. The template gives you diferent colours for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light orange for No Match).
-
+6. Fill all the Use Cases for this Specification.
+For the Tools Specification you would have something like this:
 ![Filling the Use Cases in the Mapping Template](../master/docs/img/fill_mapping_template_UC.png)
+
+  > The template gives you diferent colours for the Use Case Matching (Dark blue for Match, light blue for Partial Match and light orange for No Match).
 
 7. Fill the Bioschemas Fields
   + **bioschemas:** These columns are defined for the properties that will be in the Bioschemas Specification file.
