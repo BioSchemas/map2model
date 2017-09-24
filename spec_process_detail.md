@@ -22,7 +22,7 @@ Once you have defined Use Cases you should start to consider what properties are
 To record the decisions your team has reached follow these steps:
 
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping**. This mapping file should be placed in a folder called **<SPECIFICATION_NAME>**, which should be located in the gDrive folder *bioschemas > specifications*
-  > You want to copy the spreadsheet file not the text document file.
+  > Copy the spreadsheet file not the text document file.
 
 1. Open the Mapping template and you will find the following structure.
 
