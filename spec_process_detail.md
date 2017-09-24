@@ -55,7 +55,7 @@ In their Use Case Study, the Tools Specification identified that the Schema.org 
 ![Schema.org Type Definition](../master/docs/img/schema_org_type.png)
 
 4. Copy the Type definition table, starting from the first Property, but **do not copy the table headers**.
-For the SoftwareApplication example it should look like this:
+For the Tool example, SoftwareApplication should look like this:
 
 ![Copy Schema.org Type Definition](../master/docs/img/schema_org_type_copy.png)
 
