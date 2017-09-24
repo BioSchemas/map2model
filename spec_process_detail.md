@@ -19,8 +19,7 @@ In the following README you have an explanation of the process needed to create 
 
 After defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure. 
 
-1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) within the **<SPECIFICATION_NAME> subfolder**.
-**Folder for Bioschemas Tool Specification** ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
+1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping**. This mapping file should be placed in a folder called **<SPECIFICATION_NAME>**, which should be located in the gDrive folder *bioschemas > specifications*
 
 1. Open the Mapping template and you will find the following structure.
 
