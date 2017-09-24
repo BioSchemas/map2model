@@ -24,7 +24,7 @@ To record the decisions your team has reached follow these steps:
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping**. This mapping file should be placed in a folder called **<SPECIFICATION_NAME>**, which should be located in the gDrive folder *bioschemas > specifications*
   > Copy the spreadsheet file not the text document file.
 
-1. Open the Mapping template and you will find the following structure.
+2. Open the Mapping template and you will find the following structure.
 
 ![Bioschemas Tools Mapping empty file](../master/docs/img/mapping_empty_file.png)
   + **schema.org**: These columns are copy-pasted from a schema.org type definition page.
@@ -50,10 +50,6 @@ To record the decisions your team has reached follow these steps:
       - **No Match:** If the property doesn't match with the Schema.org Property.
       - **Partial Match**: If the Use Case Property doesn't match perfectly but is a close connection with the Schema.org property.
       
-      
-### Example walkthrough
-To illustrate this process we describe the steps using the Bioschemas Tools Specification.
-
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure.
 In their Use Case Study, the Tools Specification identified that the Schema.org Type [SoftwareApplication](http://schema.org/SoftwareApplication) was the best fit for their use cases.
 ![Schema.org Type Definition](../master/docs/img/schema_org_type.png)
