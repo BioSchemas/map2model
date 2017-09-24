@@ -17,7 +17,9 @@ In the following README you have an explanation of the process needed to create 
 
 ## MAPPING
 
-After defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure. 
+Once you have defined Use Cases you should start to consider what properties are needed to describe the data from your use case. Please try to reuse existing Schema.org properties (and definitions) where possible. It may be benficial to try and extend (or specialise) an existing Schema.org Type.  You may find reading other Bioschemas.org specifications and useful.
+
+To record the decisions your team has reached follow these steps:
 
 1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping**. This mapping file should be placed in a folder called **<SPECIFICATION_NAME>**, which should be located in the gDrive folder *bioschemas > specifications*
 
