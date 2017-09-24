@@ -1,26 +1,25 @@
 # Bioschemas Specification Process
-This repository will help people interested in defining a Bioschemas Specification. This process starts with the Use Case Study and finish with the RDFa generation.
+This repository will help people interested in defining a Bioschemas Specification. Here you will find all the templates and documentation needed to be familiar with the Specification Process. This process starts with the Use Case Study and finish with the RDFa generation.
 
 ![Bioschemas Specification Process](../master/docs/img/specification_process.jpg)
-> If you want to modify the Flow Chart [Click here](https://drive.google.com/file/d/0B9lW_BhBep0Tay1XTndCaV9GSnc/view?usp=sharing) and store the result in img folder wiht the name **specification_process.jpg**.
+> If you want to modify the flow chart, change the image file called **specification_process.jpg** in the *docs > img* folder.
 
-Here you will find all the templates and documentation needed to be familiar with the Specification Process.
 
-In the following README you have the process needed to create a Bioschemas Specification:
+In the following README you have an explanation of the process needed to create a Bioschemas Specification. There are 3 steps:
 1. Use Case Study
 1. Mapping
 1. Specification
 
-> For this expalantion, the **Bioscheas Tool Specification** will be used as the specification sample.
+> For this explanation, the **Bioschemas Tool Specification** will be used as an example.
 
 ## USE CASE STUDY
 > Section under construction.
 
 ## MAPPING
 
-After Defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure.
+After defining the properties, the Schema.org type and you will need to follow the steps bellow to get the new Specification Structure. 
 
-1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) whitin the **<SPECIFICATION_NAME> folder**.
+1. Make a copy of the [mapping template](https://drive.google.com/open?id=0Bw_p-HKWUjHoQ2RkUUthWVd3RG8) naming the file **<SPECIFICATION_NAME> mapping** and locating it in the [Bioschemas Drive Folder](https://drive.google.com/open?id=0Bw_p-HKWUjHoNThZOWNKbGhOODg) within the **<SPECIFICATION_NAME> subfolder**.
 **Folder for Bioschemas Tool Specification**
 ![Bioschemas Tool Folder](../master/docs/img/specification_folder.png)
 
