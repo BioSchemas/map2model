@@ -79,7 +79,10 @@ class FrontMatterParser:
 
         for  formatted_spec in all_specs_formatted:
             temp_spec_post=self.__get_specification_post(formatted_spec)
-            temp_spec_post.metadata['layout']= 'new_spec_detail'
+            if formatted_spec['spec_type'] == 'Type':
+                temp_spec_post.metadata['layout']= 'new_type_detail'
+            else:
+                temp_spec_post.metadata['layout']= 'new_spec_detail'
             md_fm_bytes = BytesIO()
             frontmatter.dump(temp_spec_post, md_fm_bytes)
             spec_name=temp_spec_post.metadata['name']

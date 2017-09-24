@@ -34,19 +34,12 @@ specifications:
     spec_type: Profile
     use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
     version: 0.0.1
-  - name : ProteinStructure
-    g_folder: ProteinStructure
-    g_mapping_file: ProteinStructure Mapping
+  - name : Record
+    g_folder: Record
+    g_mapping_file: Record Mapping
     status: revision
-    spec_type: Profile
+    spec_type: Type
     use_cases_url: https://drive.google.com/drive/folders/0B0fE3oOZIq44U1gzLWgtV0VBaTQ
-    version: 0.0.1
-  - name : ProteinAnnotation
-    g_folder: ProteinAnnotation
-    g_mapping_file: ProteinAnnotation Mapping
-    status: revision
-    spec_type: Profile
-    use_cases_url: https://docs.google.com/document/d/1MNU-r7CMAvKdGav1VT3XeyQXr2XwRA6JXDsoWoA0R1E
     version: 0.0.1
   - name : DataRepository
     g_folder: DataRepository

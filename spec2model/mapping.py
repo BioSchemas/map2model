@@ -145,25 +145,17 @@ def get_property_in_hierarchy(sdo_props, mapping_property):
             mapping_property['sdo_desc']=sdo_props[hierarchy_level][mapping_property['name']]['description']
     return {'type':prop_type, 'property': mapping_property}
 
-def get_formatted_props(sdo_props, mapping_props):
-    formatted_props = {}
-    new_props = []
-    extd_props = {}
+def get_formatted_props(sdo_props, mapping_props, spec_name):
+    all_props= []
     for mapping_property in mapping_props:
         temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
         if temp_prop['type'] == "new_sdo":
-            new_props.append(temp_prop['property'])
+            temp_prop['property']['parent'] = spec_name
         else:
-            prop_type = temp_prop['type']
-            if prop_type in extd_props.keys():
-                extd_props[prop_type].append(temp_prop['property'])
-            else:
-                extd_props[prop_type]=[temp_prop['property']]
+            temp_prop['property']['parent'] = temp_prop['type']
+        all_props.append(temp_prop['property'])
 
-    formatted_props['new_props']=new_props
-    formatted_props['extended_props']=extd_props
-
-    return formatted_props
+    return {'properties': all_props}
 
 
 def get_mapping_properties(mapping_sheet):
@@ -258,7 +250,7 @@ class GSheetsParser:
         mapping_props = get_mapping_properties(mapping_sheet)
 
 
-        formatted_props = get_formatted_props(sdo_props, mapping_props)
+        formatted_props = get_formatted_props(sdo_props, mapping_props, spec_description['name'])
 
         spec_description.update(formatted_props)
 
