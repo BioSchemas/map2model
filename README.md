@@ -41,14 +41,14 @@ Before starting, please ensure you have the following installed:
 1. Fork [Bioschemas specification repository](https://github.com/BioSchemas/specifications)
 1. Clone your fork to your local computer.
 1. If you added a new specification, copy the entire folder from *map2model > docs > spec_files* into the top level of the local copy of **specifications**.
-1. If you changed an existing specification copy the ``specification.html`` from the specification subfolder in *map2model > docs > spec_files* into the appropriate specification folder in the local **specifications** repo.
+1. If you changed an existing specification copy the *specification.html* file from the specification subfolder in *map2model > docs > spec_files* into the appropriate specification folder in the local **specifications** repo.
 1. Check everthing is OK. If it is, commit your changes. Then push to the GitHub hosted version of your fork.
 1. Make a **Pull Request** of your specifications repository fork:
       - Go to the GitHub webpage and choose your fork of the main **specifications** repository.
       - Click the button called *Create new pull request*
       - Click the green button titled *Create pull request*
       - Write a simple summary of your changes in the *Write* window.
-      - Click *Create pull request* button
+      - Click the *Create pull request* button
 1. Your changes will now be manually checked to ensure they do not conflict with existing content.
 1. Wait until your **Pull Request** is merged into [Bioschemas Web](https://github.com/BioSchemas/bioschemas.github.io)
       > To preserve [Bioschemas Web Page](http://bioschemas.org), changes to [bioschemas.github.io repository](https://github.com/BioSchemas/bioschemas.github.io) will be issued by Bioschemas Web Master.
@@ -88,7 +88,7 @@ specifications:
 
 ### Create your own client_secrets.json
 
-> map2model can work with the generic client_secrets file, but here you have the process to create your own json.
+**map2model** can work with the generic client_secrets file, but here you have the process to create your own json. It is unlikely you will ever need to do this, but the instructions remain for completeness.
 
 ##### Create a new Google's APIs Project and add Google Drive API Client:
 - Go to [Google's APIs Console](https://console.developers.google.com/iam-admin/projects) and create your own project. Call it whatever you want.
