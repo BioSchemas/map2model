@@ -35,12 +35,8 @@ To record the decisions your team has reached follow these steps:
     - **Marginality:** The template gives three options for the property specification of the new Bioschemas Type: Mandatory, Recommended or Optional. 
     - **Cardinalitry:**	The template gives you the two possible cardinalities in a Bioschemas Specification (ONE or Many).
     - **Controlled Vocabulary:** 
-      This field contains a list of terms or ontologies, terms are words, that are separated by a comma, and an onlology is composed by a name_space:url.                  
-      **This are three possible accepted values (Mapping Spreadsheet template handles automaticaly this colours):**
-        1. red, green, blue, pallete3:htt://ontlology.pallete3.org
-        1. pallete1:http://ontlology.pallete1.org, pallete2:http://ontlology.pallete2.org, pallete3:http://ontlology.pallete3.org
-        1. red, green, blue, white
-      > I have no idea what this is about?  
+      This field contains a list of terms or ontologies that provide values for this property.
+      
   - **USE CASE GENERAL INFORMATION**
     + **USE CASE NAME**
     + **USE CASE URL**
@@ -52,6 +48,8 @@ To record the decisions your team has reached follow these steps:
       - **Match:** If the use case matches with a Schema.org property.
       - **No Match:** If the property doesn't match with the Schema.org Property.
       - **Partial Match**: If the Use Case Property doesn't match perfectly but is a close connection with the Schema.org property.
+      
+      
 _Now that all the columns of the spread sheet are explained, lets follow the next step usisng the Bioschemas Tools Specification Example._
 
 3. Go to the schema.org and find the definition of the type you want to reuse in the Bioschemas Structure.
