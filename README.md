@@ -57,7 +57,7 @@ Before starting, please ensure you have the following installed:
 ****
 ## Advanced user's documentation
 
-### Add new specifications
+### Adding new specifications
 
 If you have created a new specification (or a specification is missing from the *map2model > docs > specification_md_files* folder) you will need to extend the *map2model > spec2model > configuration.yml* file.
 
