@@ -23,7 +23,7 @@ def __get_class_props(class_name, graph):
     print("Quering properties of  %s in Schema.org" % class_name)
 
     qres = graph.query("""prefix schema: <http://schema.org/>
-                        select distinct * where { 
+                        select distinct * where {
                             ?property schema:domainIncludes  schema:%s .
                             ?property schema:rangeIncludes  ?exp_type .
                             ?property rdfs:label ?prop_name.
@@ -36,7 +36,7 @@ def __get_class_props(class_name, graph):
         labels_dic = {}
         print('Parsing %s property.' % row['prop_name'])
         for label in labels:
-            labels_dic[label] = str(row[label])
+            labels_dic[label] = str(row[label]).replace('<a href=\"/docs/', '<a href=\"http://schema.org/docs/')
         temp_dic=__add_property(temp_dic, labels_dic)
 
     return temp_dic
