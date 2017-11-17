@@ -3,10 +3,10 @@
 **map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
 
 **map2model** retrieves properties and Bioschemas fields (Marginality, Cardinality and Controlled Vocabularies) from Bioschemas mapping files (in [GDrive](https://drive.google.com/drive/folders/0Bw_p-HKWUjHoNThZOWNKbGhOODg?usp=sharing)), then classifies properties into two groups:
-1. **Extended properties:** Properties that are part of the extended schema.org Type. 
+1. **Extended properties:** Properties that are part of the extended schema.org Type.
 1. **New properties:** Properties that are new to the schema.org vocabulary or are completely new to schema.org.
-      
-After classifing the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site thereby updating the Bioschemas.org web pages.
+
+After classifying the properties, **map2model** generates a Markdown file that can be interpreted by Bioschemas.org's web site thereby updating the Bioschemas.org web pages.
 
 Comments on each specification should be done through the *GitHub issues* tool within the [bioschemas repository](https://github.com/BioSchemas/bioschemas). This enables tracking, commenting on and executing of corrections.
 
@@ -27,13 +27,13 @@ Before starting, please ensure you have the following installed:
 
 1. Clone the **map2model** repository: ```git clone https://github.com/BioSchemas/map2model.git```
 1. Add the [Bioschemas GDrive Folder](https://drive.google.com/open?id=0B8yXU9SkT3ftaWJtTGYyTTJjck0) to your Google Account Drive.
-      > In your Gooogle Drive Account go to **Shared with me**, right click the **Bioschemas.org** folder and select **Add to my Drive**)
+      > In your Google Drive Account go to **Shared with me**, right click the **Bioschemas.org** folder and select **Add to my Drive**)
 1. Open the Terminal or Console application of your Operating System and go to the folder where you cloned the **map2model** repository.
 1. Modify the *spec2model > configuration.yml* file in your cloned repository (configuration.yml tells map2model which specifications exist and where information on them can be found).
       > If you need help to modify the configuration.yml file, please refer to the *Adding new specifications* section later in this readme.
 1. Install Python dependencies using the command ```pip3 install -r requirements.txt```.
 1. Run the map2model module by executing the command ```python3 run.py```.
-1. After executing the ```run.py``` command a web browser will ask for a Google Account authentication. **Log in using the account you used for step 2.** 
+1. After executing the ```run.py``` command a web browser will ask for a Google Account authentication. **Log in using the account you used for step 2.**
 1. Once complete, the specifications can be found in a subfolder inside *map2model > docs > spec_files* folder. There should be a folder for each specification listed in ```configuration.yml```.
 
 ### Update specifications repository
@@ -42,7 +42,7 @@ Before starting, please ensure you have the following installed:
 1. Clone your fork to your local computer.
 1. If you added a new specification, copy the entire folder from *map2model > docs > spec_files* into the top level of the local copy of **specifications**.
 1. If you changed an existing specification copy the *specification.html* file from the specification subfolder in *map2model > docs > spec_files* into the appropriate specification folder in the local **specifications** repo.
-1. Check everthing is OK. If it is, commit your changes. Then push to the GitHub hosted version of your fork.
+1. Check everything is OK. If it is, commit your changes. Then push to the GitHub hosted version of your fork.
 1. Make a **Pull Request** of your specifications repository fork:
       - Go to the GitHub webpage and choose your fork of the main **specifications** repository.
       - Click the button called *Create new pull request*
@@ -61,7 +61,7 @@ Before starting, please ensure you have the following installed:
 
 If you have created a new specification (or a specification is missing from the *map2model > docs > specification_md_files* folder) you will need to extend the *map2model > spec2model > configuration.yml* file.
 
-If you are unfamilar with yaml, please read [http://yaml.org/](http://yaml.org/).
+If you are unfamiliar with yaml, please read [http://yaml.org/](http://yaml.org/).
 
 1. Open the *map2model > spec2model > [configuration.yml](https://github.com/BioSchemas/map2model/blob/master/spec2model/configuration.yml)* file.
 1. Erase all the file content and start the ```.yml``` file with
@@ -70,9 +70,9 @@ specifications:
 ```
 1. Add the following yaml structure per each specification:
 ```
-  - name : 
-    g_folder: 
-    g_mapping_file: 
+  - name :
+    g_folder:
+    g_mapping_file:
     status: revision
     spec_type: Profile
     use_cases_url:
@@ -81,10 +81,10 @@ specifications:
       - Please be careful with spacing, as it is important in YAML!
 1. Apart from *use_case_url* all fields must have a value:
       - *name* is the name of the specification
-      - *g_folder* is the name of the gDocs folder in which the new specification exists. E.g., a *Tool* specification will be found in the **Tool** folder (i.e., *gDrive > BioSchemas.org > Specifications > Tool*). 
+      - *g_folder* is the name of the gDocs folder in which the new specification exists. E.g., a *Tool* specification will be found in the **Tool** folder (i.e., *gDrive > BioSchemas.org > Specifications > Tool*).
       - *g_mapping_file* : in the *g_folder* you should have a mapping file based on the [original template](https://docs.google.com/spreadsheets/d/1OMBiB8SXiRe1b3Cl91IuNlHbJ9_UXHg8B-GY0MYRSaY/edit?usp=sharing). Write the name of the mapping file here, e.g., **Tool Mapping**.
       - *use_cases_url* : in the *g_folder* you may have a use case document. If it exists, paste a link to it here.
-1. Re-run ```python3 run.py```. Your new markdown files should be in the *bioschemas-map2model > docs > specification_md_files* folder. 
+1. Re-run ```python3 run.py```. Your new markdown files should be in the *bioschemas-map2model > docs > specification_md_files* folder.
 
 ### Create your own client_secrets.json
 
@@ -97,7 +97,7 @@ specifications:
 - Under **G Suite APIs** you will see **Drive API**. Click on it.
 - On the next page, click on **Enable**
 - You should see a yellow warning at the top of the page informing you of the need for credentials. Do **not** click the create credentials button at the right of this warning. Instead click the **key icon** in the left menu bar.
-- In the new dialog box there is a dropdown called **create credentials**... choose **OAuth client ID**. 
+- In the new dialog box there is a dropdown called **create credentials**... choose **OAuth client ID**.
 - A form with radio buttons will appear, but it is greyed out and you cannot select anything. Instead click the blue  **Configure consent screen** button on the right.
 - In the new form enter whatever **product name** you wish and click **save**.
 - You will be returned to the form with radio buttons; select **Web application**.
