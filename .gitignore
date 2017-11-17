@@ -5,3 +5,4 @@ spec2model/__pycache__/
 /map2model.iml
 .DS_Store
 /docs/spec_files
+.ropeproject/
