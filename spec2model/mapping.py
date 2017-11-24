@@ -137,6 +137,8 @@ def __get_dic_from_sheet_row(c_property):
     property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
 
     return property_as_dic
+
+
 def get_property_in_hierarchy(sdo_props, mapping_property):
     prop_type="new_sdo"
     for hierarchy_level in sdo_props:
@@ -145,20 +147,42 @@ def get_property_in_hierarchy(sdo_props, mapping_property):
             mapping_property['sdo_desc']=sdo_props[hierarchy_level][mapping_property['name']]['description']
     return {'type':prop_type, 'property': mapping_property}
 
-def get_formatted_props(sdo_props, mapping_props, spec_name):
+
+def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
     all_props= []
+
+    # if type only get new properties from mapping file
+    if(spec_type == "Type" or spec_type == "type"):
+        for mapping_property in mapping_props:
+            temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
+            if temp_prop['type'] == "new_sdo":
+                temp_prop['property']['parent'] = spec_name                
+                all_props.append(temp_prop['property'])
+        for sdo_prop in sdo_props:
+            # now get all props from schema & make them such that _layout can use them
+            for sdo_prop_prop in sdo_props[sdo_prop].keys():
+                sdo_props[sdo_prop][sdo_prop_prop]['parent'] = sdo_prop
+                sdo_props[sdo_prop][sdo_prop_prop]['name'] = sdo_props[sdo_prop][sdo_prop_prop]['prop_name']
+                sdo_props[sdo_prop][sdo_prop_prop]['bsc_dec'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
+                sdo_props[sdo_prop][sdo_prop_prop]['sdo_desc'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
+                sdo_props[sdo_prop][sdo_prop_prop]['expected_type'] = sdo_props[sdo_prop][sdo_prop_prop]['exp_type']
+                all_props.append(sdo_props[sdo_prop][sdo_prop_prop])
+        return {'properties': all_props}
+
+    # if profile
     for mapping_property in mapping_props:
         temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
         if temp_prop['type'] == "new_sdo":
             temp_prop['property']['parent'] = spec_name
         else:
             temp_prop['property']['parent'] = temp_prop['type']
+        print (temp_prop['property'].keys())
         all_props.append(temp_prop['property'])
 
     return {'properties': all_props}
 
 
-def get_mapping_properties(mapping_sheet):
+def get_mapping_properties(mapping_sheet, spec_type):
     list_of_hashes = mapping_sheet.get_all_records(head=5)
     type_properties = []
     for c_property in list_of_hashes:
@@ -247,10 +271,10 @@ class GSheetsParser:
         print("Prepared schema.org properties for hierarchy %s" % str(spec_description ['hierarchy']))
 
         print("Classifing %s properties" % spec_description['name'])
-        mapping_props = get_mapping_properties(mapping_sheet)
+        mapping_props = get_mapping_properties(mapping_sheet, spec_description['spec_type'])
 
 
-        formatted_props = get_formatted_props(sdo_props, mapping_props, spec_description['name'])
+        formatted_props = get_formatted_props(sdo_props, mapping_props, spec_description['name'], spec_description['spec_type'])
 
         spec_description.update(formatted_props)
 
