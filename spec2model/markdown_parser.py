@@ -77,13 +77,14 @@ class FrontMatterParser:
         self.bsc_spec_list = self.bsc_file_manager.get_specification_list()
         all_specs_formatted=self.__get_all_specs_dic()
 
-        for  formatted_spec in all_specs_formatted:
+        for formatted_spec in all_specs_formatted:
             temp_spec_post=self.__get_specification_post(formatted_spec)
             if formatted_spec['spec_type'] == 'Type':
                 temp_spec_post.metadata['layout']= 'new_type_detail'
             else:
                 temp_spec_post.metadata['layout']= 'new_spec_detail'
             md_fm_bytes = BytesIO()
+            temp_spec_post.metadata['version'] = str(temp_spec_post.metadata['version'])
             frontmatter.dump(temp_spec_post, md_fm_bytes)
             spec_name=temp_spec_post.metadata['name']
             self.__create_spec_folder_struct(spec_name)
@@ -97,5 +98,3 @@ class FrontMatterParser:
         os.remove(self.creds_file_path)
         print('Goggle Drive connection closed and credit file deleted.')
         print ('All Jekyll formatted MarkDown files generated.')
-
-
