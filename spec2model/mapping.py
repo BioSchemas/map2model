@@ -92,8 +92,10 @@ def get_expected_type(expected_types):
 
     expected_types = expected_types.strip()
     expected_types = expected_types.replace('\n', '')
-    expected_types = expected_types.replace(' OR ', ' or ')
-    list_of_types = expected_types.split(' or ')
+    expected_types = expected_types.replace(' OR ', ' ')
+    expected_types = expected_types.replace(' or ', ' ')
+    expected_types = expected_types.replace(',', '')
+    list_of_types = expected_types.split(" ")
     i = 0
     for type in list_of_types:
         list_of_types[i] = type.strip()
@@ -134,6 +136,7 @@ def __get_dic_from_sheet_row(c_property):
 
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
+    print(get_expected_type(c_property['Expected Type']))
     property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
 
     return property_as_dic
@@ -156,7 +159,7 @@ def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
         for mapping_property in mapping_props:
             temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
             if temp_prop['type'] == "new_sdo":
-                temp_prop['property']['parent'] = spec_name                
+                temp_prop['property']['parent'] = spec_name
                 all_props.append(temp_prop['property'])
         for sdo_prop in sdo_props:
             # now get all props from schema & make them such that _layout can use them
