@@ -115,7 +115,10 @@ def _parse_controlled_vocabulary(temp_cont_vocab):
             ontology['url'] = temp_onto[1].strip()
             cv_parsed['ontologies'].append(ontology)
         elif element != '':
-            cv_parsed['terms'].append(element)
+            element = element.replace('LIST - ', '').strip()
+            temp_term = {}
+            temp_term['name'] = element
+            cv_parsed['terms'].append(temp_term)
     return cv_parsed
 
 
@@ -136,7 +139,6 @@ def __get_dic_from_sheet_row(c_property):
 
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
-    print(get_expected_type(c_property['Expected Type']))
     property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
 
     return property_as_dic
@@ -153,23 +155,30 @@ def get_property_in_hierarchy(sdo_props, mapping_property):
 
 def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
     all_props= []
+    bsc_props = []
 
     # if type only get new properties from mapping file
     if(spec_type == "Type" or spec_type == "type"):
         for mapping_property in mapping_props:
+            bsc_props.append(mapping_property['name'])
             temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
             if temp_prop['type'] == "new_sdo":
                 temp_prop['property']['parent'] = spec_name
-                all_props.append(temp_prop['property'])
+            all_props.append(temp_prop['property'])
         for sdo_prop in sdo_props:
             # now get all props from schema & make them such that _layout can use them
             for sdo_prop_prop in sdo_props[sdo_prop].keys():
-                sdo_props[sdo_prop][sdo_prop_prop]['parent'] = sdo_prop
-                sdo_props[sdo_prop][sdo_prop_prop]['name'] = sdo_props[sdo_prop][sdo_prop_prop]['prop_name']
-                sdo_props[sdo_prop][sdo_prop_prop]['bsc_dec'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
-                sdo_props[sdo_prop][sdo_prop_prop]['sdo_desc'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
-                sdo_props[sdo_prop][sdo_prop_prop]['expected_type'] = sdo_props[sdo_prop][sdo_prop_prop]['exp_type']
-                all_props.append(sdo_props[sdo_prop][sdo_prop_prop])
+                if sdo_props[sdo_prop][sdo_prop_prop]['prop_name'] not in bsc_props:
+                    sdo_props[sdo_prop][sdo_prop_prop]['parent'] = sdo_prop
+                    sdo_props[sdo_prop][sdo_prop_prop]['name'] = sdo_props[sdo_prop][sdo_prop_prop]['prop_name']
+                    # sdo_props[sdo_prop][sdo_prop_prop]['bsc_dec'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
+                    sdo_props[sdo_prop][sdo_prop_prop]['sdo_desc'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
+                    sdo_props[sdo_prop][sdo_prop_prop]['expected_type'] = sdo_props[sdo_prop][sdo_prop_prop]['exp_type']
+                    all_props.append(sdo_props[sdo_prop][sdo_prop_prop])
+                else:
+                    for i in all_props:
+                        if i['name'] == sdo_props[sdo_prop][sdo_prop_prop]['prop_name']:
+                            i['parent'] = sdo_prop
         return {'properties': all_props}
 
     # if profile
@@ -179,7 +188,6 @@ def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
             temp_prop['property']['parent'] = spec_name
         else:
             temp_prop['property']['parent'] = temp_prop['type']
-        print (temp_prop['property'].keys())
         all_props.append(temp_prop['property'])
 
     return {'properties': all_props}
