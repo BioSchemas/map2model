@@ -140,6 +140,9 @@ def __get_dic_from_sheet_row(c_property):
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
     property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
+    print (property_as_dic['name'] + ':' + property_as_dic['sdo_desc'] +'\n')
+    if property_as_dic['sdo_desc'] is None:
+        property_as_dic['sdo_desc'] = ' ';
 
     return property_as_dic
 
@@ -197,7 +200,7 @@ def get_mapping_properties(mapping_sheet, spec_type):
     list_of_hashes = mapping_sheet.get_all_records(head=5)
     type_properties = []
     for c_property in list_of_hashes:
-        if(c_property['Expected Type']!="" and c_property['Description']!=""
+        if(c_property['Expected Type']!="" # and c_property['Description']!=""
            and c_property['Marginality']!="" and c_property['Cardinality']!=""):
             print("Parsing %s property from Google Sheets." % c_property['Property'])
             property_as_dic=__get_dic_from_sheet_row(c_property)
