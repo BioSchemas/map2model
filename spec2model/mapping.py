@@ -89,18 +89,16 @@ def get_hierarchy(props_dic):
 
 # Function that receives an string with expected types and generates an array with each expected pype
 def get_expected_type(expected_types):
-
     expected_types = expected_types.strip()
     expected_types = expected_types.replace('\n', '')
     expected_types = expected_types.replace(' OR ', ' ')
     expected_types = expected_types.replace(' or ', ' ')
-    expected_types = expected_types.replace(',', '')
-    list_of_types = expected_types.split(" ")
-    i = 0
-    for type in list_of_types:
-        list_of_types[i] = type.strip()
-        i += 1
-
+    expected_types = expected_types.replace(',', '')    
+    list_of_types = []
+    for type in expected_types.split(" "):
+        temp_type = type.strip()
+        if(temp_type != '' and temp_type != ' '):
+            list_of_types.append(temp_type.strip())
     return list_of_types
 
 
@@ -144,7 +142,7 @@ def __get_dic_from_sheet_row(c_property):
     # Set schema.org attributes
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
-    if(c_property['Property URL'] != ''):
+    if('Property URL' in c_property and     c_property['Property URL'] != ''):
         property_as_dic['property_url'] = c_property['Property URL'].strip()
     if 'sdo_desc' not in property_as_dic:
         property_as_dic['sdo_desc'] = '';
@@ -291,11 +289,7 @@ class GSheetsParser:
         print("Classifing %s properties" % spec_description['name'])
         mapping_props = get_mapping_properties(mapping_sheet, spec_description['spec_type'])
 
-
         formatted_props = get_formatted_props(sdo_props, mapping_props, spec_description['name'], spec_description['spec_type'])
-        print(formatted_props)
-        print("****")
-        print(spec_description)
         spec_description.update(formatted_props)
-        
+
         return spec_description
