@@ -142,16 +142,12 @@ def __get_dic_from_sheet_row(c_property):
 
 
     # Set schema.org attributes
-
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
-    property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
     if(c_property['Property URL'] != ''):
         property_as_dic['property_url'] = c_property['Property URL'].strip()
-    # print (property_as_dic['name'] + ':' + property_as_dic['sdo_desc'] +'\n')
-    if property_as_dic['sdo_desc'] is None:
-        property_as_dic['sdo_desc'] = ' ';
-
+    if 'sdo_desc' not in property_as_dic:
+        property_as_dic['sdo_desc'] = '';
     return property_as_dic
 
 
@@ -297,7 +293,9 @@ class GSheetsParser:
 
 
         formatted_props = get_formatted_props(sdo_props, mapping_props, spec_description['name'], spec_description['spec_type'])
-
+        print(formatted_props)
+        print("****")
+        print(spec_description)
         spec_description.update(formatted_props)
-
+        
         return spec_description
