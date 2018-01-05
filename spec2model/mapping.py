@@ -140,7 +140,9 @@ def __get_dic_from_sheet_row(c_property):
     property_as_dic['name'] = c_property['Property'].strip().strip('\n')
     property_as_dic['expected_type'] = get_expected_type(c_property['Expected Type'])
     property_as_dic['sdo_desc'] = c_property['Description'].strip().replace('\n', ' ')
-    print (property_as_dic['name'] + ':' + property_as_dic['sdo_desc'] +'\n')
+    if(c_property['Property URL'] != ''):
+        property_as_dic['property_url'] = c_property['Property URL'].strip()
+    # print (property_as_dic['name'] + ':' + property_as_dic['sdo_desc'] +'\n')
     if property_as_dic['sdo_desc'] is None:
         property_as_dic['sdo_desc'] = ' ';
 
