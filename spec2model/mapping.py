@@ -106,19 +106,25 @@ def get_expected_type(expected_types):
 
 def _parse_controlled_vocabulary(temp_cont_vocab):
     cv_parsed = {'terms':[] , 'ontologies':[]}
-    element_list = temp_cont_vocab.split(',')
-    for element in element_list:
-        if ':' in element:
-            temp_onto = element.split(":",1)
-            ontology = {}
-            ontology['name'] = temp_onto[0].strip()
-            ontology['url'] = temp_onto[1].strip()
-            cv_parsed['ontologies'].append(ontology)
-        elif element != '':
-            element = element.replace('LIST - ', '').strip()
-            temp_term = {}
-            temp_term['name'] = element
-            cv_parsed['terms'].append(temp_term)
+    if "LIST - " in temp_cont_vocab:
+        temp_cont_vocab = temp_cont_vocab.replace('LIST - ', '').strip()
+        element_list = temp_cont_vocab.split(',')
+        for element in element_list:
+            if element != '':
+                temp_term = {}
+                temp_term['name'] = element.strip()
+                cv_parsed['terms'].append(temp_term)
+    if "ONTOLOGY - " in temp_cont_vocab:
+        temp_cont_vocab = temp_cont_vocab.replace('ONTOLOGY - ', '').strip()
+        element_list = temp_cont_vocab.split(',')
+        for element in element_list:
+            if element != '':
+                element = element.strip()
+                temp_ont = element.split(":", 1)
+                ontology = {}
+                ontology['name'] = temp_ont[0].strip()
+                ontology['url'] = temp_ont[1].strip()
+                cv_parsed['ontologies'].append(ontology)
     return cv_parsed
 
 
