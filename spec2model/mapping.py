@@ -93,7 +93,7 @@ def get_expected_type(expected_types):
     expected_types = expected_types.replace('\n', '')
     expected_types = expected_types.replace(' OR ', ' ')
     expected_types = expected_types.replace(' or ', ' ')
-    expected_types = expected_types.replace(',', '')    
+    expected_types = expected_types.replace(',', '')
     list_of_types = []
     for type in expected_types.split(" "):
         temp_type = type.strip()
@@ -179,6 +179,7 @@ def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
                     # sdo_props[sdo_prop][sdo_prop_prop]['bsc_dec'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
                     sdo_props[sdo_prop][sdo_prop_prop]['sdo_desc'] = sdo_props[sdo_prop][sdo_prop_prop]['description']
                     sdo_props[sdo_prop][sdo_prop_prop]['expected_type'] = sdo_props[sdo_prop][sdo_prop_prop]['exp_type']
+                    sdo_props[sdo_prop][sdo_prop_prop]['property_url'] = str("http://schema.org/"+sdo_props[sdo_prop][sdo_prop_prop]['prop_name'])
                     all_props.append(sdo_props[sdo_prop][sdo_prop_prop])
                 else:
                     for i in all_props:
@@ -188,11 +189,12 @@ def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
 
     # if profile
     for mapping_property in mapping_props:
-        temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
+        temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)        
         if temp_prop['type'] == "new_sdo":
             temp_prop['property']['parent'] = spec_name
         else:
             temp_prop['property']['parent'] = temp_prop['type']
+            temp_prop['property']['property_url'] = str("http://schema.org/"+temp_prop['property']['name'])
         all_props.append(temp_prop['property'])
 
     return {'properties': all_props}
