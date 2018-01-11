@@ -102,19 +102,21 @@ def get_expected_type(expected_types):
     return list_of_types
 
 
-def _parse_controlled_vocabulary(temp_cont_vocab):
-    cv_parsed = {'terms':[] , 'ontologies':[]}
-    if "LIST - " in temp_cont_vocab:
-        temp_cont_vocab = temp_cont_vocab.replace('LIST - ', '').strip()
-        element_list = temp_cont_vocab.split(',')
+def _parse_terms_in_cv(string2BParsed, cv_parsed):
+    if "LIST - " in string2BParsed:
+        string2BParsed = string2BParsed.replace('LIST - ', '').strip()
+        element_list = string2BParsed.split(',')
         for element in element_list:
             if element != '':
                 temp_term = {}
                 temp_term['name'] = element.strip()
                 cv_parsed['terms'].append(temp_term)
-    if "ONTOLOGY - " in temp_cont_vocab:
-        temp_cont_vocab = temp_cont_vocab.replace('ONTOLOGY - ', '').strip()
-        element_list = temp_cont_vocab.split(',')
+    return cv_parsed
+
+def _parse_ontology_in_cv(string2BParsed, cv_parsed):
+    if "ONTOLOGY - " in string2BParsed:
+        string2BParsed = string2BParsed.replace('ONTOLOGY - ', '').strip()
+        element_list = string2BParsed.split(',')
         for element in element_list:
             if element != '':
                 element = element.strip()
@@ -123,6 +125,42 @@ def _parse_controlled_vocabulary(temp_cont_vocab):
                 ontology['name'] = temp_ont[0].strip()
                 ontology['url'] = temp_ont[1].strip()
                 cv_parsed['ontologies'].append(ontology)
+    return cv_parsed
+
+def _parse_controlled_vocabulary(temp_cont_vocab):
+    cv_parsed = {'terms':[] , 'ontologies':[]}
+    if("LIST - " in temp_cont_vocab and "ONTOLOGY - " in temp_cont_vocab):
+        indexOnt = temp_cont_vocab.index("ONTOLOGY - ")
+        indexTerm = temp_cont_vocab.index("LIST - ")
+        if(indexOnt < indexTerm):
+            cv_parsed = _parse_ontology_in_cv(temp_cont_vocab[:indexTerm], cv_parsed)
+            cv_parsed = _parse_terms_in_cv(temp_cont_vocab[indexTerm:], cv_parsed)
+        elif(indexOnt > indexTerm):
+            cv_parsed = _parse_ontology_in_cv(temp_cont_vocab[indexOnt:], cv_parsed)
+            cv_parsed = _parse_terms_in_cv(temp_cont_vocab[:indexOnt], cv_parsed)
+        else:
+            print("ERROR - terms & ontologies have the same index!")
+    elif "LIST - " in temp_cont_vocab:
+        cv_parsed = _parse_terms_in_cv(temp_cont_vocab, cv_parsed)
+        # temp_cont_vocab = temp_cont_vocab.replace('LIST - ', '').strip()
+        # element_list = temp_cont_vocab.split(',')
+        # for element in element_list:
+        #     if element != '':
+        #         temp_term = {}
+        #         temp_term['name'] = element.strip()
+        #         cv_parsed['terms'].append(temp_term)
+    elif "ONTOLOGY - " in temp_cont_vocab:
+        cv_parsed = _parse_ontology_in_cv(temp_cont_vocab, cv_parsed)
+        # temp_cont_vocab = temp_cont_vocab.replace('ONTOLOGY - ', '').strip()
+        # element_list = temp_cont_vocab.split(',')
+        # for element in element_list:
+        #     if element != '':
+        #         element = element.strip()
+        #         temp_ont = element.split(":", 1)
+        #         ontology = {}
+        #         ontology['name'] = temp_ont[0].strip()
+        #         ontology['url'] = temp_ont[1].strip()
+        #         cv_parsed['ontologies'].append(ontology)
     return cv_parsed
 
 
@@ -189,7 +227,7 @@ def get_formatted_props(sdo_props, mapping_props, spec_name, spec_type):
 
     # if profile
     for mapping_property in mapping_props:
-        temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)        
+        temp_prop=get_property_in_hierarchy(sdo_props, mapping_property)
         if temp_prop['type'] == "new_sdo":
             temp_prop['property']['parent'] = spec_name
         else:
