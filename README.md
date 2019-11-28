@@ -1,3 +1,7 @@
+**map2model** is no longer used by Bioschemas for generating web representations of the specifications. The functionality is now provided by [GoWeb](https://github.com/BioSchemas/bioschemas-goweb).
+
+**This repository is now being archived.**
+
 # Bioschemas.org map2model
 
 **map2model** is a Python module that facilitates [Bioschemas Groups](http://bioschemas.org/groups/) in the specification definition process.
